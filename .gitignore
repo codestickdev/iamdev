@@ -17,6 +17,9 @@
 /wp-*.php
 /xmlrpc.php
 
+# Nodes
+/wp-content/themes/iamdev/node_modules
+
 # Configuration
 wp-config.php
 
