@@ -1,0 +1,12 @@
+$fontblack: #0b0b19;
+$gold: #af8f6b;
+$gold_light: #b5a288;
+$darkblue: #152131;
+
+@mixin gold_gradient_bg{
+    background: rgb(209,190,164);
+    background: -moz-linear-gradient(90deg, rgba(209,190,164,1) 0%, rgba(181,161,135,1) 38%, rgba(144,122,93,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(209,190,164,1) 0%, rgba(181,161,135,1) 38%, rgba(144,122,93,1) 100%);
+    background: linear-gradient(90deg, rgba(209,190,164,1) 0%, rgba(181,161,135,1) 38%, rgba(144,122,93,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d1bea4",endColorstr="#907a5d",GradientType=1);
+}

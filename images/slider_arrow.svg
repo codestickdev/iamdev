@@ -1,0 +1,17 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 22" width="68" height="22">
+	<title>home</title>
+	<defs>
+		<image  width="68" height="2" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAACAQMAAADb3OiAAAAAAXNSR0IB2cksfwAAAANQTFRFr49rEyUb0wAAAAtJREFUeJxjYMAEAAAUAAF9/h7uAAAAAElFTkSuQmCC"/>
+		<image  width="12" height="22" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAMAAADD5o0oAAAAAXNSR0IB2cksfwAAANtQTFRFr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49rr49r2IsrEAAAAEl0Uk5TABM4X4icBAwpWXZ+gyVUo2xQAwp/qJhOH0+ZqVMOCCFNeyQZSJUoCR5HdaBaHEORiSwFb7KvZC8Qn6KqO55urhtCKoR6pFFgndpK8scAAACySURBVHicTZDnGoIgFIYpB5ojy1WhZnunmZXtYev+r6iA8pFf5z0PfAMA6CkUGZajIw8FsSTJFKCicmWtgseqrqiGadkCBr1WbyDDUdzv3mv6LcSpbfjde51uD8liH/IADIajMZpMBRc/mM0DFDILN8JgL+PVepNQi+1uzx6SiMIxD/4pPmfXLtfAzAR+0jciTU1Takri3P9xcFDbMiUSlFRwsgq03EN75mobKcg+5BW+P6/+FIRFQNCJAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<g id="home">
+		<g id="referencje">
+			<g id="-e-lewo">
+				<use id="strzałka" href="#img1" x="0" y="10"/>
+				<use id="strzałka" href="#img2" x="0" y="0"/>
+			</g>
+		</g>
+	</g>
+</svg>

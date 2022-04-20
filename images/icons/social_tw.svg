@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 28" width="32" height="28">
+	<title>home</title>
+	<defs>
+		<image width="32" height="32" id="img1" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KICA8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgogIDxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDE2IDE2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNiAxNiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iIzQ0NDQ0NCIgZD0iTTE2LDNjLTAuNiwwLjMtMS4yLDAuNC0xLjksMC41YzAuNy0wLjQsMS4yLTEsMS40LTEuOGMtMC42LDAuNC0xLjMsMC42LTIuMSwwLjhjLTAuNi0wLjYtMS41LTEtMi40LTEgQzkuMywxLjUsNy44LDMsNy44LDQuOGMwLDAuMywwLDAuNSwwLjEsMC43QzUuMiw1LjQsMi43LDQuMSwxLjEsMi4xYy0wLjMsMC41LTAuNCwxLTAuNCwxLjdjMCwxLjEsMC42LDIuMSwxLjUsMi43IGMtMC41LDAtMS0wLjItMS41LTAuNGMwLDAsMCwwLDAsMGMwLDEuNiwxLjEsMi45LDIuNiwzLjJDMyw5LjQsMi43LDkuNCwyLjQsOS40Yy0wLjIsMC0wLjQsMC0wLjYtMC4xYzAuNCwxLjMsMS42LDIuMywzLjEsMi4zIGMtMS4xLDAuOS0yLjUsMS40LTQuMSwxLjRjLTAuMywwLTAuNSwwLTAuOCwwYzEuNSwwLjksMy4yLDEuNSw1LDEuNWM2LDAsOS4zLTUsOS4zLTkuM2MwLTAuMSwwLTAuMywwLTAuNEMxNSw0LjMsMTUuNiwzLjcsMTYsM3oiPjwvcGF0aD48L3N2Zz4="/>
+	</defs>
+	<style>
+	</style>
+	<g id="home">
+		<g id="header">
+			<g id="Social Icons copy">
+				<use id="-e-16px-logo-twitter" href="#img1" transform="matrix(1,0,0,1,0,-2)"/>
+			</g>
+		</g>
+	</g>
+</svg>

@@ -11,20 +11,48 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'iamdev' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'iamdev' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'iamdev' ), 'iamdev', '<a href="https://codestick.pl/">Codestick</a>' );
-				?>
-		</div><!-- .site-info -->
+	<footer id="colophon" class="siteFooter">
+		<div class="siteFooter__wrap container">
+			<div class="siteFooter__logo">
+				<div class="logo">
+					<img src="<?php echo get_template_directory_uri() . '/images/logo_white.svg'; ?>"/>
+				</div>
+				<p>Działamy w całej Polsce!</p>
+			</div>
+			<div class="siteFooter__links">
+				<h3>Szybkie linki</h3>
+				<ul>
+					<li><a href="#">Kariera</a></li>
+					<li><a href="#">Referencje</a></li>
+					<li><a href="#">Media</a></li>
+				</ul>
+			</div>
+			<div class="siteFooter__links">
+				<h3>Kontakt</h3>
+				<div class="contact">
+					<a href="tel:516004957" class="phone">+48 516 004 957</a>
+					<a href="tel:516000720" class="phone">+48 516 000 720</a>
+					<a href="mailto:kontakt@agencjaiam.pl" class="mail">kontakt@agencjaiam.pl</a>
+				</div>
+			</div>
+			<div class="siteFooter__links">
+				<div class="address">
+					<p><b>Biuro:</b> Zabłocie 25/31,<br/>
+					30-701 Kraków</p>
+					<p>NIP: 552 165 74 32</p>
+				</div>
+			</div>
+		</div>
+		<div class="siteFooter__copyrights container">
+			<p class="copy">I AM © 2022. Wszystkie prawa zastrzeżone.</p>
+			<div class="links">
+				<a href="#">Polityka Prywatności</a>
+				<span>/</span>
+				<a href="#">Regulamin</a>
+				<span>/</span>
+				<a href="#">Kontakt</a>
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

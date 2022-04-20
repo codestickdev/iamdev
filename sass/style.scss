@@ -21,3 +21,96 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+
+/**
+ *  Global
+ */
+@use 'global/grid';
+@use 'global/fonts';
+@use 'global/variables' as v;
+
+/**
+ *  Partials
+ */
+@use 'partials/siteFooter';
+@use 'partials/siteHeader';
+@use 'partials/footerContact';
+ 
+/**
+ *  Subpages
+ */
+@use 'subpages/home';
+
+
+a{
+    text-decoration: none !important;
+    transition: ease .3s;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 45px;
+    padding: 0 25px;
+    max-width: fit-content;
+    max-width: -moz-max-content;
+    max-width: -webkit-fit-content;
+    @include v.gold_gradient_bg;
+    transition: ease .3s;
+
+    span{
+        font-size: 14px;
+        line-height: 1;
+        font-weight: 500;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding-right: 30px;
+        position: relative;
+
+        &:after{
+            content: '';
+            width: 25px;
+            height: 1px;
+            background-color: #fff;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            transition: ease .3s;
+        }
+        &:before{
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-right: 1px solid #fff;
+            border-top: 1px solid #fff;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%) rotate(45deg);
+            transition: ease .3s;
+        }
+    }
+
+    &:hover{
+        opacity: .8;
+
+        span{
+            &:after{
+                width: 30px;
+                right: -5px;
+            }
+            &:before{
+                right: -5px;
+            }
+        }
+    }
+
+    &--button{
+        border-radius: 0;
+        border: 0;
+        cursor: pointer;
+    }
+}

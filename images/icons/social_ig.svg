@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+	<title>home</title>
+	<defs>
+		<image width="32" height="32" id="img1" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KICA8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgogIDxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDE2IDE2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNiAxNiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGNpcmNsZSBmaWxsPSIjNDQ0NDQ0IiBjeD0iMTIuMTQ1IiBjeT0iMy44OTIiIHI9IjAuOTYiPjwvY2lyY2xlPiA8cGF0aCBkYXRhLWNvbG9yPSJjb2xvci0yIiBmaWxsPSIjNDQ0NDQ0IiBkPSJNOCwxMmMtMi4yMDYsMC00LTEuNzk0LTQtNHMxLjc5NC00LDQtNHM0LDEuNzk0LDQsNFMxMC4yMDYsMTIsOCwxMnogTTgsNkM2Ljg5Nyw2LDYsNi44OTcsNiw4IHMwLjg5NywyLDIsMnMyLTAuODk3LDItMlM5LjEwMyw2LDgsNnoiPjwvcGF0aD4gPHBhdGggZmlsbD0iIzQ0NDQ0NCIgZD0iTTEyLDE2SDRjLTIuMDU2LDAtNC0xLjk0NC00LTRWNGMwLTIuMDU2LDEuOTQ0LTQsNC00aDhjMi4wNTYsMCw0LDEuOTQ0LDQsNHY4QzE2LDE0LjA1NiwxNC4wNTYsMTYsMTIsMTZ6IE00LDJDMy4wNjUsMiwyLDMuMDY1LDIsNHY4YzAsMC45NTMsMS4wNDcsMiwyLDJoOGMwLjkzNSwwLDItMS4wNjUsMi0yVjRjMC0wLjkzNS0xLjA2NS0yLTItMkg0eiI+PC9wYXRoPjwvc3ZnPg=="/>
+	</defs>
+	<style>
+	</style>
+	<g id="home">
+		<g id="header">
+			<g id="Social Icons copy">
+				<use id="-e-16px-logo-instagram" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+			</g>
+		</g>
+	</g>
+</svg>

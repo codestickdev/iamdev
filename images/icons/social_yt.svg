@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 24" width="32" height="24">
+	<title>home</title>
+	<defs>
+		<image width="32" height="32" id="img1" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KICA8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgogIDxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDE2IDE2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNiAxNiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iIzQ0NDQ0NCIgZD0iTTE1LjgsNC44Yy0wLjItMS4zLTAuOC0yLjItMi4yLTIuNEMxMS40LDIsOCwyLDgsMlM0LjYsMiwyLjQsMi40QzEsMi42LDAuMywzLjUsMC4yLDQuOEMwLDYuMSwwLDgsMCw4IHMwLDEuOSwwLjIsMy4yYzAuMiwxLjMsMC44LDIuMiwyLjIsMi40QzQuNiwxNCw4LDE0LDgsMTRzMy40LDAsNS42LTAuNGMxLjQtMC4zLDItMS4xLDIuMi0yLjRDMTYsOS45LDE2LDgsMTYsOFMxNiw2LjEsMTUuOCw0Ljh6IE02LDExVjVsNSwzTDYsMTF6Ij48L3BhdGg+PC9zdmc+"/>
+	</defs>
+	<style>
+	</style>
+	<g id="home">
+		<g id="header">
+			<g id="Social Icons copy">
+				<use id="-e-16px-logo-youtube" href="#img1" transform="matrix(1,0,0,1,0,-4)"/>
+			</g>
+		</g>
+	</g>
+</svg>

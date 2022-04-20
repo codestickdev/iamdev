@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 400;
+    src: url('/wp-content/themes/iamdev/fonts/Poppins/Poppins-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 500;
+    src: url('/wp-content/themes/iamdev/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 600;
+    src: url('/wp-content/themes/iamdev/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Domine';
+    font-weight: 400;
+    src: url('/wp-content/themes/iamdev/fonts/Domine/Domine-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Domine';
+    font-weight: 500;
+    src: url('/wp-content/themes/iamdev/fonts/Domine/Domine-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Domine';
+    font-weight: 600;
+    src: url('/wp-content/themes/iamdev/fonts/Domine/Domine-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Domine';
+    font-weight: 700;
+    src: url('/wp-content/themes/iamdev/fonts/Domine/Domine-Bold.ttf') format('truetype');
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+}

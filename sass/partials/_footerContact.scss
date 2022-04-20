@@ -1,0 +1,171 @@
+@use '../global/variables' as v;
+
+.footerContact{
+    padding: 55px 0 100px;
+    background-color: #f8f8f8;
+    position: relative;
+
+    &:before{
+        content: '';
+        width: 545px;
+        height: 25px;
+        @include v.gold_gradient_bg;
+        clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    &__heading{
+        p{
+            &.lead{
+                font-size: 17px;
+                line-height: 21px;
+                font-weight: 500;
+                color: v.$gold_light;
+                margin: 0 0 20px;
+                letter-spacing: 8px;  
+                text-transform: uppercase;    
+                text-align: center;          
+            }
+        }
+        h2{
+            font-size: 60px;
+            line-height: 72px;
+            font-family: 'Domine', sans-serif;
+            font-weight: 400;
+            color: v.$fontblack;
+            margin: 0 0 20px;
+            text-align: center;
+        }
+    }
+    .contactForm{
+        &__row{
+            margin: 0 0 35px;
+
+            &--half{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .contactForm__field{
+                    width: 100%;
+                    max-width: 485px;
+                    padding: 0 10px;
+
+                    &:first-of-type{
+                        padding-left: 0;
+                    }
+                    &:last-of-type{
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+
+        &__field{
+            input,
+            textarea{
+                width: 100%;
+                height: 45px;
+                border: 0;
+                border-bottom: 1px solid v.$gold;
+                border-radius: 0;
+                padding: 0;
+                font-size: 16px;
+                font-weight: 500;
+                color: v.$gold;
+                background-color: transparent;
+                outline: none;
+                resize: none;
+                transition: ease .3s;
+
+                &:focus{
+                    border-bottom-color: #000;
+                }
+
+                &::placeholder{
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: v.$gold;
+                }
+            }
+        }
+
+        &__submit{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__acceptance{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            position: relative;
+            max-width: 720px;
+
+            &.checked{
+                .input{
+                    &:before{
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .input{
+                width: 16px;
+                height: 16px;
+                position: relative;
+                margin-right: 10px;
+                background-color: #e4e4e4;
+                border-radius: 3px;
+
+                &:before{
+                    content: '';
+                    width: 5px;
+                    height: 10px;
+                    border-right: 1px solid v.$gold;
+                    border-bottom: 1px solid v.$gold;
+                    position: absolute;
+                    top: 42%;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    transform: translate(0, -50%) rotate(45deg);
+                    opacity: 0;
+                }
+            }
+            label{
+                max-width: calc(100% - 26px);
+                font-size: 12px;
+                line-height: 18px;
+                color: #484848;
+                margin: 0;
+                text-align: left;
+                float: left;
+
+                a{
+                    color: #484848;
+                    text-decoration: underline !important;
+                    position: relative;
+                    z-index: 3;
+
+                    &:hover{
+                        opacity: .7;
+                    }
+                }
+            }
+            input{
+                position: absolute;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 3;
+                opacity: 0;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
