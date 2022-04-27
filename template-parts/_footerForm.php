@@ -1,3 +1,6 @@
+<?php
+    $page = get_query_var('page');
+?>
 <section class="footerContact">
     <div class="footerContact__wrap container">
         <div class="footerContact__heading">
@@ -26,6 +29,16 @@
                     <textarea name="contactMessage" placeholder="Wiadomość"></textarea>
                 </div>
             </div>
+            <?php if($page == 'career'): ?>
+            <div class="contactForm__row">
+                <div class="contactForm__field">
+                    <input class="contactFile" id="contactFile" type="file" name="contactFile">
+                    <div class="uploadFile">
+                        <p>Dołącz CV (max. 2MB)</p>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
             <div class="contactForm__submit">
                 <div class="contactForm__acceptance">
                     <input type="checkbox" name="contactAcceptance"/>

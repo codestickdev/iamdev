@@ -22,9 +22,9 @@
 			<div class="siteFooter__links">
 				<h3>Szybkie linki</h3>
 				<ul>
-					<li><a href="#">Kariera</a></li>
-					<li><a href="#">Referencje</a></li>
-					<li><a href="#">Media</a></li>
+					<li><a href="<?php echo home_url('/kariera'); ?>">Kariera</a></li>
+					<li><a href="<?php echo home_url('/referencje'); ?>">Referencje</a></li>
+					<li><a href="<?php echo home_url('/media'); ?>">Media</a></li>
 				</ul>
 			</div>
 			<div class="siteFooter__links">
@@ -46,11 +46,11 @@
 		<div class="siteFooter__copyrights container">
 			<p class="copy">I AM © 2022. Wszystkie prawa zastrzeżone.</p>
 			<div class="links">
-				<a href="#">Polityka Prywatności</a>
+				<a href="<?php echo home_url('/polityka-prywatnosci'); ?>">Polityka Prywatności</a>
 				<span>/</span>
-				<a href="#">Regulamin</a>
+				<a href="<?php echo home_url('/regulamin'); ?>">Regulamin</a>
 				<span>/</span>
-				<a href="#">Kontakt</a>
+				<a href="<?php echo home_url('/kontakt'); ?>">Kontakt</a>
 			</div>
 		</div>
 	</footer><!-- #colophon -->

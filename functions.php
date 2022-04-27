@@ -160,6 +160,7 @@ function iamdev_scripts() {
 	// Theme scripts
 	wp_register_script('iamdev-scripts', get_template_directory_uri() . '/js/custom.js', array(), false, false);
 	wp_enqueue_script('iamdev-scripts');
+	wp_localize_script( 'iamdev-scripts', 'iam', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 	
 }
 add_action( 'wp_enqueue_scripts', 'iamdev_scripts' );
@@ -191,3 +192,60 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Get realization category posts
+ */
+add_action('wp_ajax_getRealizations', 'getRealizations');
+add_action('wp_ajax_nopriv_getRealizations', 'getRealizations');
+
+function getRealizations(){
+	$data = isset( $_POST['data'] ) ? $_POST['data'] : '';
+
+	if($data !== 'wszystkie'){
+		$args = array(
+			'post_type'=> 'realizacje',
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'typ',
+					'field' => 'slug',
+					'terms' => $data,
+				)
+			)
+		);
+	}else{
+		$args = array(
+			'post_type'=> 'realizacje',
+			'order'    => 'ASC'
+		);
+	}
+	
+	$realizations = new WP_Query( $args );
+
+	$response = '';
+
+    // The Query
+    if ( $realizations->have_posts() ) {
+        while ( $realizations->have_posts() ): $realizations->the_post(); ?>
+			<a href="<?php echo get_the_permalink(); ?>" class="realization" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');">
+				<div class="realization__cover">
+					<h3><?php echo get_the_title(); ?></h3>
+				</div>
+			</a>
+		<?php endwhile;
+		echo $response;
+    }else{
+		echo 'empty';
+	}
+
+	die();
+}
+
+function be_pagination_post_nav_prev( $output ) {
+    return str_replace( '<a ', '<a class="btn btn--prev" ', $output );
+}
+add_filter( 'previous_post_link', 'be_pagination_post_nav_prev' );
+
+function be_pagination_post_nav_next( $output ) {
+    return str_replace( '<a ', '<a class="btn btn--next" ', $output );
+}
+add_filter( 'next_post_link', 'be_pagination_post_nav_next' );

@@ -1,0 +1,53 @@
+@use '../global/variables' as v;
+
+.sectionCenterHeading{
+    margin: 0 0 40px;
+
+    &__wrap{
+        max-width: 680px;
+        margin: 0 auto;
+
+        &:before{
+            content: '';
+            width: 1px;
+            height: 60px;
+            background-color: v.$gold_light;
+            display: block;
+            position: relative;
+            transform: skew(-25deg, 0deg);
+            margin: 0 auto 30px;
+        }
+        .lead{
+            font-size: 17px;
+            line-height: 21px;
+            font-weight: 500;
+            color: v.$gold_light;
+            margin: 0 0 20px;
+            letter-spacing: 8px;  
+            text-transform: uppercase; 
+            text-align: center;             
+        }
+        h2{
+            font-size: 51px;
+            line-height: 62px;
+            font-family: 'Domine', sans-serif;
+            font-weight: 400;
+            color: v.$fontblack;
+            margin: 0;
+            text-align: center;
+        }
+    }
+
+    &--wide{
+        .sectionCenterHeading__wrap{
+            max-width: 100%;
+        }
+    }
+    &--noline{
+        .sectionCenterHeading__wrap{
+            &::before{
+                display: none;
+            }
+        }
+    }
+}

@@ -1,5 +1,15 @@
 @use '../global/variables' as v;
 
+body{
+    &.page-template-page_home{
+        .siteHeader{
+            &__logo{
+                align-items: flex-end;
+            }
+        }
+    }
+}
+
 .siteHeader{
     min-height: 110px;
 
@@ -11,7 +21,7 @@
     }
     &__logo{
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: flex-start;
         width: 100%;
         max-width: 125px;

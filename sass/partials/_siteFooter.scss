@@ -3,6 +3,18 @@
 .siteFooter{
     background-color: v.$darkblue;
     padding: 50px 0;
+    position: relative;
+
+    &:before{
+        content: '';
+        width: 545px;
+        height: 25px;
+        @include v.gold_gradient_bg;
+        clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
+        position: absolute;
+        left: 0;
+        top: -1.55rem;
+    }
 
     &__wrap{
         display: flex;

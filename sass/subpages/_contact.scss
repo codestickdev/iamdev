@@ -1,0 +1,52 @@
+@use '../global/variables' as v;
+
+.contactMain{
+    padding: 60px 0;
+
+    .contactForm{
+        margin: 130px 0 0;
+    }
+}
+.contactInfo{
+    padding: 150px 0;
+
+    &__wrap{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__box{
+        // max-width: 250px;
+
+        h3{
+            font-size: 13px;
+            line-height: 18px;
+            font-weight: 500;
+            color: v.$gold_light;
+            margin: 0 0 20px;
+            letter-spacing: 8px;  
+            text-transform: uppercase; 
+            text-align: left; 
+        }
+        p{
+            font-size: 17px;
+            line-height: 24px;
+            color: v.$fontblack;
+            margin: 0;
+            text-align: left;
+        }
+        a{
+            display: block;
+            font-size: 17px;
+            line-height: 24px;
+            color: v.$fontblack;
+            margin: 0;
+            text-align: left;
+            transition: ease .3s;
+
+            &:hover{
+                opacity: .7;
+            }
+        }
+    }
+}

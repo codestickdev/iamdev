@@ -1,0 +1,147 @@
+@use '../global/variables' as v;
+
+.mainRealization{
+    padding: 85px 0;
+
+    &__heading{
+        .projectLogo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0 80px;
+
+            img{
+                max-width: 350px;
+                margin: 0 auto;
+            }
+        }
+        .desc{
+            margin: 60px 0 0;
+
+            p{
+                font-size: 14px;
+                line-height: 21px;
+                color: #484848;
+                text-align: center;
+                margin: 0;
+            }
+        }
+    }
+    &__info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 55px 0 70px;
+
+        .box{
+            &__lead{
+                font-size: 12px;
+                line-height: 18px;
+                font-weight: 500;
+                color: v.$gold_light;
+                margin: 0 0 5px;
+                letter-spacing: 8px;  
+                text-transform: uppercase; 
+                text-align: center;   
+            }
+            h3{
+                font-size: 17px;
+                line-height: 24px;
+                font-weight: 400;
+                font-family: 'Domine', sans-serif;
+                color: v.$fontblack;
+                margin: 0;
+                text-align: center;
+            }
+        }
+    }
+    &__content{
+        .gallery{
+            &__image{
+                display: block;
+                width: 100%;
+                margin: 0 0 20px;
+
+                .image{
+                    display: flex;
+                    width: 100%;    
+
+                    img{
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+            &__desc{
+                margin: 10px 0 0;
+
+                p{
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #484848;
+                    margin: 0;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    &__more{
+        margin: 80px 0 100px;
+
+        &>h2{
+            font-size: 40px;
+            line-height: 50px;
+            font-family: 'Domine', sans-serif;
+            font-weight: 400;
+            color: v.$fontblack;
+            margin: 0 0 60px;
+            text-align: center;
+        }
+
+        .realizations{
+            display: flex;
+            justify-content: space-between;
+
+            .realization{
+                width: 100%;
+                max-width: 365px;
+
+                &__image{
+                    display: block;
+                    width: 100%;
+                    height: 270px;
+                    margin: 0 0 60px;
+                    cursor: pointer;
+
+                    &:hover{
+                        opacity: .7;
+                    }
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                h3{
+                    text-align: center;
+                    max-width: 280px;
+                    margin: 0 auto 20px;
+                    
+                    a{
+                        font-size: 20px;
+                        line-height: 28px;
+                        font-family: 'Domine', sans-serif;
+                        font-weight: 400;
+                        color: v.$fontblack;
+                        
+                        &:hover{
+                            opacity: .7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

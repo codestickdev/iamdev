@@ -1,0 +1,115 @@
+@use '../global/variables' as v;
+
+.careerMain{
+    padding: 60px 0;
+
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+        margin: 120px auto;
+    }
+    &__sidebar{
+        width: 100%;
+        max-width: 300px;
+        margin-right: 80px;
+
+        .content{
+            position: sticky;
+            top: 40px;
+
+            h2{
+                font-size: 30px;
+                line-height: 40px;
+                font-weight: 400;
+                font-family: 'Domine', sans-serif;
+                color: v.$gold_light;
+                text-align: left;
+                margin: 0 0 20px;
+                text-transform: uppercase;
+            }
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li{
+                    display: block;
+                    margin: 0 0 8px;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: v.$fontblack;
+                    text-align: left;
+                }
+            }
+        }
+    }
+    &__content{
+        width: 100%;
+        max-width: calc(100% - 380px);
+
+        .info{
+            margin: 30px 0 50px;
+
+            h2{
+                font-size: 40px;
+                line-height: 50px;
+                font-weight: 400;
+                font-family: 'Domine', sans-serif;
+                color: v.$fontblack;
+                text-align: left;
+                margin: 0 0 35px;
+            }
+            p{
+                font-size: 16px;
+                line-height: 24px;
+                color: #484848;
+                margin: 0;
+                text-align: left;
+            }
+        }
+        .steps{
+            &__step{
+                display: block;
+                width: 100%;
+                margin: 0 0 70px;
+
+                &:last-of-type{
+                    margin: 0;
+                }
+
+                h3{
+                    display: block;
+                    font-size: 30px;
+                    line-height: 40px;
+                    font-weight: 400;
+                    font-family: 'Domine', sans-serif;
+                    color: v.$fontblack;
+                    margin: 0 0 15px;
+                    text-transform: uppercase;
+
+                    span{
+                        font-size: 50px;
+                        color: v.$gold_light;
+                        margin-right: 10px;
+                        position: relative;
+                        bottom: -1px;
+                    }
+                }
+                p{
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: v.$fontblack;
+                    margin: 0 0 15px;
+
+                    b{
+                        font-weight: 500;
+                    }
+
+                    &:last-of-type{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

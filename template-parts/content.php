@@ -10,26 +10,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				iamdev_posted_on();
-				iamdev_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php iamdev_post_thumbnail(); ?>
+	<div class="mainArticle__heading">
+		<div class="image">
+			<img src="<?php echo get_field('mainArticle_image')['url']; ?>" alt="<?php echo get_field('mainArticle_image')['alt']; ?>"/>
+		</div>
+		<h1><?php the_title(); ?></h1>
+		<p class="created"><?php echo get_the_date('F j, Y'); ?></p>
+	</div>
 
 	<div class="entry-content">
 		<?php
@@ -56,8 +43,4 @@
 		);
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php iamdev_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

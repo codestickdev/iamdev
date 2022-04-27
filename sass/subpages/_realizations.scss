@@ -1,0 +1,120 @@
+@use '../global/variables' as v;
+
+.realizationsHeader{
+    padding: 60px 0;
+
+    &__categories{
+        max-width: 900px;
+        margin: 70px auto 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .cat{
+            margin: 0 15px 30px;
+            cursor: pointer;
+            transition: ease .3s;
+
+            &:hover{
+                opacity: .5;
+            }
+
+            p{
+                font-size: 12px;
+                line-height: 14px;
+                font-weight: 500;
+                color: v.$fontblack;
+                text-align: center;
+                margin: 0;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                transition: ease .3s;
+            }
+
+            &--active{
+                &:hover{
+                    opacity: 1;
+                }
+                p{
+                    color: v.$gold_light;
+                }
+            }
+        }
+    }
+}
+
+.realizationsList{
+    padding: 0 0 270px;
+
+    &__wrap{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .empty{
+            display: block;
+            width: 100%;
+            font-size: 40px;
+            line-height: 50px;
+            font-weight: 400;
+            font-family: 'Domine', sans-serif;
+            color: #48484861;
+            text-align: center;
+            margin: 0;
+        }
+
+        .realization{
+            width: 100%;
+            max-width: 364px;
+            height: 428px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            position: relative;
+            margin: 0 19px 38px;
+            cursor: pointer;
+
+            &:hover{
+                .realization__cover{
+                    opacity: 1;
+                }
+            }
+
+            &:nth-child(3n-2){
+                margin-left: 0;
+            }
+
+            &:nth-child(3n-0){
+                margin-right: 0;
+            }
+
+            &__cover{
+                width: 100%;
+                height: 100%;
+                background-color: #7d694ecc;
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+                cursor: pointer;
+                transition: ease .3s;
+
+                h3{
+                    font-size: 15px;
+                    line-height: 24px;
+                    font-weight: 400;
+                    color: #fff;
+                    letter-spacing: 5px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    max-width: 220px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

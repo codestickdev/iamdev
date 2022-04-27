@@ -1,0 +1,94 @@
+@use '../global/variables' as v;
+
+.subpageHeader{
+    min-height: 535px;
+    background-position: right top;
+    background-size: cover;
+    position: relative;
+
+    &__wrap{
+        min-height: inherit;
+        position: relative;
+
+        &:before{
+            content: "";
+            background-color: #b5a187bf;
+            min-height: inherit;
+            left: calc(-100vw + 15px);
+            top: 0;
+            width: 100vw;
+            position: absolute;
+        }
+    }
+    &__content{
+        min-height: inherit;
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: 768px;
+        position: absolute;
+        left: 15px;
+        top: 0;
+        z-index: 2;
+        min-height: inherit;
+        background-color: #b5a187bf;
+        clip-path: polygon(0 0, 100% 0, 450px 100%, 0% 100%);
+
+        h1,
+        h2{
+            font-size: 60px;
+            line-height: 72px;
+            font-weight: 400;
+            color: #fff;
+            font-family: 'Domine', sans-serif;
+            margin: 0;
+            max-width: 540px;
+        }
+    }
+    &__phone{
+        width: 100%;
+        max-width: 325px;
+        height: 76px;
+        @include v.gold_gradient_bg;
+        clip-path: polygon(45px 0, 100% 0, 100% 100%, 0% 100%);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        &:hover{
+            span{
+                opacity: .7;
+            }
+        }
+
+        span{
+            font-size: 17px;
+            line-height: 1;
+            color: #fff;
+            text-align: center;
+            letter-spacing: 3px;
+            padding-right: 50px;
+            padding-left: 40px;
+            position: relative;
+            transition: ease .3s;
+
+            &:before{
+                content: '';
+                background-image: url('/wp-content/themes/iamdev/images/icons/phone_ico.svg');
+                background-size: 23px;
+                width: 23px;
+                height: 23px;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+                filter: invert(1);
+            }
+        }
+    }
+}
