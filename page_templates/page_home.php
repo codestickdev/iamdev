@@ -8,16 +8,17 @@ get_header(); ?>
     <header class="homeSlider">
         <div class="homeSlider__wrap container-lg">
             <div class="homeSlider__content">
+                <?php while(have_rows('homeSlider')): the_row();
+                    $lead = get_sub_field('homeSlider_lead');
+                    $title = get_sub_field('homeSlider_title');
+                    $btn = get_sub_field('homeSlider_btn');
+                ?>
                 <div class="slideContent">
-                    <p class="lead">Agencja 360 stopni</p>
-                    <h2>Kompleksowa <br/>obsługa marketingowa <br/>Twojej firmy</h2>
-                    <a href="#" class="btn"><span>Czytaj więcej</span></a>
+                    <p class="lead"><?php echo $lead; ?></p>
+                    <h2><?php echo $title; ?></h2>
+                    <a href="<?php echo $btn['url']; ?>" class="btn"><span><?php echo $btn['title']; ?></span></a>
                 </div>
-                <div class="slideContent">
-                    <p class="lead">Agencja 360 stopni</p>
-                    <h2>Kompleksowa <br/>obsługa marketingowa <br/>Twojej firmy</h2>
-                    <a href="#" class="btn"><span>Czytaj więcej</span></a>
-                </div>
+                <?php endwhile; ?>
             </div>
             <div class="homeSlider__social">
                 <a href="#" target="_blank">
@@ -35,8 +36,9 @@ get_header(); ?>
             </div>
         </div>
         <div class="homeSlider__images">
-            <div class="slideImage" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homeSlider_01.png'; ?>');"></div>
-            <div class="slideImage" style="background-image: url('<?php echo get_template_directory_uri() . '/images/homeSlider_01.png'; ?>');"></div>
+            <?php while(have_rows('homeSlider')): the_row(); ?>
+            <div class="slideImage" style="background-image: url('<?php echo get_sub_field('homeSlider_image')['url']; ?>');"></div>
+            <?php endwhile; ?>
         </div>
         <a href="tel:516004957" class="homeSlider__phone">
             <span>516 004 957</span>
@@ -52,48 +54,49 @@ get_header(); ?>
                         <h2>Who I am</h2>
                     </div>
                     <div class="content">
-                        <p>Lata doświadczeń oraz znajomość różnych mechanizmów jest tym, co nas definiuje i sprawia, że potrafimy działać skutecznie i efektywnie. Zawsze we właściwym kierunku i z najlepszymi wynikami.</p>
+                        <p><?php echo get_field('homeAbout_content'); ?></p>
                     </div>
                 </div>
                 <div class="right">
-                    <p><b>PASJA I ZAANGAŻOWANIE /</b> Jesteśmy przekonani, że najlepsze pomysły rodzą się wówczas, gdy ich autorami są osoby które tworzą z zamiłowaniem, a nie przymusem do pracy.</p>
-                    <p><b>INDYWIDUALNE PODEJŚCIE /</b> Zanim przystąpimy do konkretnych działań, robimy wszystko aby jak najlepiej poznać Klienta i Jego biznes. To sprawia, że kolejne kroki są pewne i zdecydowane.</p>
-                    <p><b>PARTNER W BIZNESIE /</b> Cenimy obustronne zaangażowanie i możliwość długofalowej współpracy. Jesteśmy partnerem w biznesie, nie zleceniobiorcą.</p>
+                    <?php while(have_rows('homeAbout_list')): the_row(); ?>
+                    <p><b><?php echo get_sub_field('homeAbout_list_title'); ?> /</b> <?php echo get_sub_field('homeAbout_list_content'); ?></p>
+                    <?php endwhile; ?>
                 </div>
             </div>
             <div class="homeAbout__images container">
                 <div class="left">
                     <div class="image">
-                        <img src="<?php echo get_template_directory_uri() . '/images/homeAbout_01.png'; ?>"/>
+                        <img src="<?php echo get_field('homeAbout_image_left')['url']; ?>" alt="<?php echo get_field('homeAbout_image_left')['alt']; ?>"/>
                     </div>
                 </div>
                 <div class="right">
                     <div class="image">
-                        <img src="<?php echo get_template_directory_uri() . '/images/homeAbout_02.png'; ?>"/>
+                        <img src="<?php echo get_field('homeAbout_image_right')['url']; ?>" alt="<?php echo get_field('homeAbout_image_right')['alt']; ?>"/>
                     </div>
                 </div>
             </div>  
         </div>
         <div class="homeAbout__info container">
             <div class="left">
-                <p>Metody działań, jakie przedstawiamy naszym partnerom, bez względu na wielkość kampanii i zainwestowany budżet, mają zawsze te same cele – efektywność, zysk, rozpoznawalność <br/>na rynku, zadowolenie i satysfakcja Klientów.</p>
+                <p><?php echo get_field('homeAbout_content_left'); ?></p>
             </div>
             <div class="right">
-                <p>Posługujemy się sprawdzonymi danymi i skupiamy na <br/>matematycznych założeniach bo wiemy, że tam gdzie <br/>pojawiają się domysły i przypuszczenia nie ma miejsca <br/>dla dobrych wyników.</p>
+                <p><?php echo get_field('homeAbout_content_left'); ?></p>
             </div>
         </div>
     </section>
 
     <section class="homeTestimonials">
         <div class="homeTestimonials__wrap container">
+            <?php while(have_rows('homeTestimonials')): the_row();
+                $content = get_sub_field('homeTestimonials_content');
+                $author = get_sub_field('homeTestimonials_author');
+            ?>
             <div class="testi">
-                <h3><b>“</b>Jako klient czujemy się słuchani i mamy poczucie indywidualnego podejścia do naszych potrzeb...<b>”</b></h3>
-                <p class="testi__author">Bernadetta Eckhardt-Ćwik</p>
+                <h3><b>“</b><?php echo $content; ?><b>”</b></h3>
+                <p class="testi__author"><?php echo $author; ?></p>
             </div>
-            <div class="testi">
-                <h3><b>“</b>Jako klient czujemy się słuchani i mamy poczucie indywidualnego podejścia do naszych potrzeb...<b>”</b></h3>
-                <p class="testi__author">Jan Kowalski</p>
-            </div>
+            <?php endwhile; ?>
         </div>
     </section>
 
@@ -104,37 +107,22 @@ get_header(); ?>
                 <h2>Skuteczny model działania</h2>
             </div>
             <div class="homePlan__list">
+                <?php while(have_rows('homePlan')): the_row();
+                    $icon = get_sub_field('homePlan_icon');
+                    $title = get_sub_field('homePlan_title');
+                    $content = get_sub_field('homePlan_content');
+                ?>
                 <div class="pos">
                     <div class="pos__icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/homePlan_01.svg'; ?>"/>
+                        <img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" />
                     </div>
-                    <h3 class="pos__title">Analiza</h2>
-                    <p class="pos__desc">Współpracę rozpoczynamy od analiz i audytu, których zakres ustalamy wspólnie. Na tym etapie współpracy poznajemy Twoją firmę od strony prowadzonych działań marketingowych.</p>
+                    <h3 class="pos__title"><?php echo $title; ?></h2>
+                    <p class="pos__desc"><?php echo $content; ?></p>
                 </div>
-                <div class="pos">
-                    <div class="pos__icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/homePlan_02.svg'; ?>"/>
-                    </div>
-                    <h3 class="pos__title">Plan</h2>
-                    <p class="pos__desc">Dobieramy narzędzia i opracowujemy harmonogram działań. Rekomendujemy optymalne rozwiązania i wspólnie ustalamy budżet. Tworzymy plan, aby w następnym kroku wcielić go w życie.</p>
-                </div>
-                <div class="pos">
-                    <div class="pos__icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/homePlan_03.svg'; ?>"/>
-                    </div>
-                    <h3 class="pos__title">Wdrożenie</h2>
-                    <p class="pos__desc">Zgodnie z zaplanowanym harmonogramem, uruchamiamy konkretne działania marketingowe. Monitorujemy ich prawidłowy przebieg i analizujemy efektywność.</p>
-                </div>
-                <div class="pos">
-                    <div class="pos__icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/homePlan_04.svg'; ?>"/>
-                    </div>
-                    <h3 class="pos__title">Wzrost sprzedaży</h2>
-                    <p class="pos__desc">Kontrolujemy trwające kampanie i poddajemy je optymalizacjom, aby ich rezultat był jak najlepszy. Regularnie przedstawiamy raporty, abyś był pewien, że nieustannie pracujemy na Twój sukces.</p>
-                </div>
+                <?php endwhile; ?>
             </div>
             <div class="homePlan__cta">
-                <a href="#" class="btn"><span>Czytaj więcej</span></a>
+                <a href="<?php get_field('homePlan_btn')['url']; ?>" class="btn"><span><?php echo get_field('homePlan_btn')['title']; ?></span></a>
             </div>
         </div>
     </section>
@@ -144,36 +132,33 @@ get_header(); ?>
             <div class="homeExp__content">
                 <div class="homeExp__heading">
                     <p class="lead">Doświadczenie</p>
-                    <h2>Skuteczność <br/>i osiągnięcia</h2>
+                    <h2><?php echo get_field('homeExp_title'); ?></h2>
                 </div>
-                <ul>
-                    <li>Skuteczność prowadzonych działań marketingowych.</li>
-                    <li>Projekty od A do Z – kompleksowość i precyzja.</li>
-                    <li>Stale zwiększana liczba klientów i wzrost zysków.</li>
-                </ul>
-                <p>Twoje osiągnięcia są także naszymi osiągnięciami. Dzięki temu wiemy, że nasza praca ma sens i sprawia, że czujemy ogromną satysfakcję. Daje nam to siłę i jeszcze więcej chęci do działania.</p>
+                <?php echo get_field('homeExp_content'); ?>
             </div>
             <div class="homeExp__image">
-                <img src="<?php echo get_template_directory_uri() . '/images/homeExp.png'; ?>"/>
+                <img src="<?php echo get_field('homeExp_image')['url']; ?>" alt="<?php echo get_field('homeExp_image')['alt']; ?>"/>
             </div>
         </div>
     </section>
 
+    <?php
+        $portfolio = get_field('homePortfolio');
+    ?>
     <section class="homePortfolio">
         <div class="homePortfolio__wrap container">
             <div class="homePortfolio__images">
-                <div class="image" data-url="#" data-title="Wizualizacje Rumiana House" data-desc="Z każdej naszej współpracy jesteśmy niezwykle dumni.">
-                    <img src="<?php echo get_template_directory_uri() . '/images/realizations_01.png' ?>"/>
+                <?php foreach($portfolio as $project): ?>
+                <div class="image" data-url="<?php echo get_permalink($project->ID); ?>" data-title="<?php echo $project->post_title; ?>" data-desc="<?php echo get_field('mainRealization_featureddesc', $project->ID); ?>">
+                    <img src="<?php echo get_field('mainRealization_featuredimage', $project->ID)['url']; ?>" alt="<?php echo get_field('mainRealization_featuredimage', $project->ID)['alt']; ?>"/>
                 </div>
-                <div class="image" data-url="#" data-title="Testowy projekt" data-desc="Lorem ipsum dolor sit amet.">
-                    <img src="<?php echo get_template_directory_uri() . '/images/realizations_01.png' ?>"/>
-                </div>
+                <?php endforeach; ?>
             </div>
             <div class="homePortfolio__content">
-                <p class="lead">Ostatnie projekty<span>/</span><a href="#">Zobacz</a></p>
+                <p class="lead">Ostatnie projekty<span>/</span><a href="<?php echo get_permalink($portfolio[0]->ID); ?>" class="link">Zobacz</a></p>
                 <h2>Nasze realizacje</h2>
-                <h3 class="title">Wizualizacje Rumiana House</h3>
-                <p class="desc">Z każdej naszej współpracy jesteśmy niezwykle dumni.</p>
+                <h3 class="title"><?php echo $portfolio[0]->post_title; ?></h3>
+                <p class="desc"><?php echo get_field('mainRealization_featureddesc', $portfolio[0]->ID); ?></p>
             </div>
         </div>
     </section>
@@ -184,18 +169,11 @@ get_header(); ?>
                 <h2>Zaufali nam</h2>
             </div>
             <div class="homeTrusted__list">
+                <?php while(have_rows('homeTrusted')): the_row(); ?>
                 <div class="logo">
-                    <img src="<?php echo get_template_directory_uri() . '/images/partners/beauty_control.svg'; ?>"/>
+                    <img src="<?php echo get_sub_field('homeTrusted_logo')['url']; ?>" alt="<?php echo get_sub_field('homeTrusted_logo')['alt']; ?>"/>
                 </div>
-                <div class="logo">
-                    <img src="<?php echo get_template_directory_uri() . '/images/partners/eckhardt.svg'; ?>"/>
-                </div>
-                <div class="logo">
-                    <img src="<?php echo get_template_directory_uri() . '/images/partners/rumiana_house.svg'; ?>"/>
-                </div>
-                <div class="logo">
-                    <img src="<?php echo get_template_directory_uri() . '/images/partners/witkowski.svg'; ?>"/>
-                </div>
+                <?php endwhile; ?>
             </div>
         </div>
     </section>

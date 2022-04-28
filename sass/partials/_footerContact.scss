@@ -181,3 +181,61 @@
         }
     }
 }
+@media (max-width: 991px){
+    .footerContact{
+        &__heading{
+            p{
+                &.lead{
+                    font-size: 14px;
+                    line-height: 19px;
+                    letter-spacing: 6px;
+                }
+            }
+            h2{
+                font-size: 40px;
+                line-height: 52px;
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .footerContact{
+        &__heading{
+            p{
+                &.lead{
+                    font-size: 13px;
+                    line-height: 18px;
+                    letter-spacing: 5px;
+                    margin: 0 0 15px;
+                }
+            }
+            h2{
+                font-size: 40px;
+                line-height: 52px;
+            }
+        }
+        .contactForm{
+            &__row{
+                &--half{
+                    flex-direction: column;
+    
+                    .contactForm__field{
+                        max-width: 100%;
+                        padding: 0 !important;
+
+                        &:first-of-type{
+                            margin: 0 0 30px;
+                        }
+                    }
+                }
+            }
+            &__submit{
+                flex-direction: column;
+            }
+            &__acceptance{
+                max-width: 100%;
+                margin: 0 0 30px;
+            }
+        }
+    }
+}

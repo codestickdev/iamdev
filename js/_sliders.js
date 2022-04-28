@@ -42,6 +42,7 @@
             setTimeout(function(){
                 content.find('.title').text(title);
                 content.find('.desc').text(desc);
+                content.find('.link').attr('href', url);
             }, 300);
             setTimeout(function(){
                 content.css('opacity', '1');
@@ -50,6 +51,7 @@
         $('.homePortfolio__images').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
+            adaptiveHeight: true,
             arrows: true,
             dots: false,
         });

@@ -100,3 +100,27 @@ body{
         }
     }
 }
+@media (max-width: 1249px){
+    .siteHeader{
+        &__logo{
+            align-items: center !important;
+            max-width: 95px;
+
+            a{
+                padding-top: 15px;
+            }
+        }
+        &__nav{
+            max-width: 680px;
+        }
+    }
+}
+@media (max-width: 991px){
+    .siteHeader{
+        &__nav{
+            ul{
+                display: none;
+            }
+        }
+    }
+}
