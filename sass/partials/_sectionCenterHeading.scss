@@ -51,3 +51,38 @@
         }
     }
 }
+@media (max-width: 991px){
+    .sectionCenterHeading{
+        &__wrap{
+            &:before{
+                height: 50px;
+                margin: 0 auto 20px;
+            }
+            .lead{
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: 6px;
+            }
+            h2{
+                font-size: 41px;
+                line-height: 52px;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .sectionCenterHeading{
+        &__wrap{
+            .lead{
+                font-size: 13px;
+                line-height: 16px;
+                letter-spacing: 5px;
+                margin: 0 0 10px;
+            }
+            h2{
+                font-size: 30px;
+                line-height: 38px;
+            }
+        }
+    }
+}

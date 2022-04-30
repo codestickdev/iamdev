@@ -58,6 +58,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 a{
     text-decoration: none !important;
     transition: ease .3s;
+    outline: none !important;
+
+    &:focus{
+        outline: none !important;
+    }
 }
 
 .btn{
@@ -226,6 +231,26 @@ a{
             text-transform: lowercase;
             letter-spacing: normal;
             font-weight: 400;
+        }
+    }
+}
+@media (max-width: 991px){
+    .btn{
+        &--article{
+            span{
+                font-size: 12px;
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .btn{
+        min-height: 40px;
+        padding: 0 15px;
+
+        span{
+            font-size: 12px;
+            letter-spacing: 2px;
         }
     }
 }

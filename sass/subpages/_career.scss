@@ -113,3 +113,79 @@
         }
     }
 }
+@media (max-width: 1249px){
+    .careerMain{
+        &__sidebar{
+            max-width: 270px;
+            margin-right: 40px;
+        }
+        &__content{
+            max-width: calc(100% - 310px);
+        }
+    }
+}
+@media (max-width: 991px){
+    .careerMain{
+        padding: 40px 0;
+
+        &__wrap{
+            flex-direction: column;
+            margin: 60px auto;
+        }
+        &__sidebar{
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+        &__content{
+            max-width: 100%;
+        }
+    }
+}
+@media (max-width: 575px){
+    .careerMain{
+        &__sidebar{
+            .content{
+                h2{
+                    font-size: 21px;
+                    line-height: 30px;
+                    margin: 0 0 15px;
+                }
+                ul{
+                    li{
+                        font-size: 16px;
+                        line-height: 21px;
+                    }
+                }
+            }
+        }
+        &__content{
+            .info{
+                h2{
+                    font-size: 30px;
+                    line-height: 40px;
+                    margin: 0 0 20px;
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+            .steps{
+                &__step{
+                    .heading{
+                        h3{
+                            font-size: 24px;
+                            line-height: 30px;
+
+                            span{
+                                font-size: 40px;
+                                margin-right: 6px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

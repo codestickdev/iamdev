@@ -118,3 +118,92 @@
         }
     }
 }
+@media (max-width: 1249px){
+    .referenceMain{
+        &__list{
+            .reference{
+                &__logo{
+                    max-width: 300px;
+                }
+                &__content{
+                    max-width: calc(100% - 330px);
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .referenceMain{
+        &__list{
+            .reference{
+                flex-direction: column;
+
+                &__logo{
+                    max-width: 300px;
+                    margin-right: 0;
+                    margin-bottom: 30px;
+                }
+                &__content{
+                    max-width: 100%;
+
+                    p{
+                        &:not(.author){
+                            text-align: center;
+                        }
+                        &.author{
+                            margin-right: 0 !important;
+                            margin-left: auto !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .referenceMain{
+        &__list{
+            .reference{
+                &:last-of-type{
+                    padding-bottom: 0;
+                }
+                &:first-of-type{
+                    padding-top: 0;
+                }
+                &__content{
+                    p{
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .referenceMain{
+        &__list{
+            .reference{
+                &__content{
+                    p{
+                        &.author{
+                            font-size: 13px;
+                            letter-spacing: 3px;
+                            text-align: center;
+                            margin: 0 auto !important;
+                            padding: 20px 0 0;
+
+                            &:before{
+                                display: block;
+                                left: 0;
+                                right: 0;
+                                margin: 0 auto 15px;
+                                position: relative;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

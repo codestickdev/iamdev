@@ -214,28 +214,30 @@
                 line-height: 52px;
             }
         }
-        .contactForm{
-            &__row{
-                &--half{
-                    flex-direction: column;
-    
-                    .contactForm__field{
-                        max-width: 100%;
-                        padding: 0 !important;
+    }
+}
+@media (max-width: 575px){
+    .contactForm{
+        &__row{
+            &--half{
+                flex-direction: column;
 
-                        &:first-of-type{
-                            margin: 0 0 30px;
-                        }
+                .contactForm__field{
+                    max-width: 100%;
+                    padding: 0 !important;
+
+                    &:first-of-type{
+                        margin: 0 0 30px;
                     }
                 }
             }
-            &__submit{
-                flex-direction: column;
-            }
-            &__acceptance{
-                max-width: 100%;
-                margin: 0 0 30px;
-            }
+        }
+        &__submit{
+            flex-direction: column;
+        }
+        &__acceptance{
+            max-width: 100%;
+            margin: 0 0 30px;
         }
     }
 }

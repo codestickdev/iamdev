@@ -7,6 +7,16 @@
         margin: 130px 0 0;
     }
 }
+@media (max-width: 767px){
+    .contactMain{
+        padding: 40px 0 0;
+
+        .contactForm{
+            margin: 50px 0 0;
+        }
+    }
+}
+
 .contactInfo{
     padding: 150px 0;
 
@@ -16,8 +26,6 @@
         justify-content: space-between;
     }
     &__box{
-        // max-width: 250px;
-
         h3{
             font-size: 13px;
             line-height: 18px;
@@ -46,6 +54,22 @@
 
             &:hover{
                 opacity: .7;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .contactInfo{
+        padding: 40px 0 80px;
+
+        &__wrap{
+            flex-direction: column;
+        }
+        &__box{
+            margin: 0 0 30px;
+
+            &:last-of-type{
+                margin: 0;
             }
         }
     }

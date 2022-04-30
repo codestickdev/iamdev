@@ -4,6 +4,8 @@
     padding: 85px 0;
 
     &__heading{
+        padding: 0 10px;
+        
         .projectLogo{
             display: flex;
             align-items: center;
@@ -11,6 +13,7 @@
             margin: 0 0 80px;
 
             img{
+                width: 100%;
                 max-width: 350px;
                 margin: 0 auto;
             }
@@ -138,6 +141,109 @@
                         
                         &:hover{
                             opacity: .7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1249px){
+    .mainRealization{
+        &__more{
+            .realizations{
+                .realization{
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .mainRealization{
+        &__more{
+            .realizations{
+                .realization{
+                    max-width: 230px;
+
+                    &__image{
+                        margin: 0 0 30px;
+                    }
+                    h3{
+                        a{
+                            font-size: 16px;
+                            line-height: 21px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .mainRealization{
+        &__heading{
+            .projectLogo{
+                margin: 0 0 50px;
+            }
+        }
+        &__info{
+            flex-wrap: wrap;
+
+            .box{
+                width: calc(100% / 2) !important;
+                margin: 0 0 30px;
+            }
+        }
+        &__more{
+            .realizations{
+                .realization{
+                    max-width: 170px;
+
+                    &__image{
+                        height: 200px;
+                        margin: 0 0 30px;
+                    }
+                    h3{
+                        a{
+                            font-size: 16px;
+                            line-height: 21px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .mainRealization{
+        padding: 40px 0 85px;
+
+        &__more{
+            &>h2{
+                font-size: 30px;
+                line-height: 38px;
+                margin: 0 0 30px;
+            }
+            .realizations{
+                flex-direction: column;
+
+                .realization{
+                    max-width: 300px;
+                    margin: 0 auto 30px;
+
+                    &:last-of-type{
+                        margin: 0 auto;
+                    }
+
+                    &__image{
+                        height: 250px;
+                        margin: 0 0 20px;
+                    }
+                    h3{
+                        a{
+                            font-size: 16px;
+                            line-height: 21px;
                         }
                     }
                 }

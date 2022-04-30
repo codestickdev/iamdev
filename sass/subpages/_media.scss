@@ -14,8 +14,10 @@
             margin-right: 50px;
             margin-bottom: 80px;
 
-            &:nth-child(3n-0){
-                margin-right: 0;
+            @media (min-width: 992px){
+                &:nth-child(3n-0){
+                    margin-right: 0;
+                }
             }
 
             &__thumb{
@@ -85,6 +87,111 @@
                     line-height: 18px;
                     color: v.$fontblack;
                     margin: 0;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1249px){
+    .mediaMain{
+        &__list{
+            .mediaArticle{
+                max-width: 290px;
+                margin-right: 30px;
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .mediaMain{
+        &__list{
+            margin: 50px auto 0;
+            max-width: 610px;
+
+            .mediaArticle{
+                max-width: 290px;
+                margin-right: 30px;
+
+                &__thumb{
+                    height: 370px;
+                }
+
+                &:nth-child(2n-0){
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .mediaMain{
+        &__list{
+            margin: 50px auto 0;
+            max-width: 610px;
+
+            .mediaArticle{
+                max-width: 240px;
+
+                &__thumb{
+                    height: 340px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .mediaMain{
+        &__list{
+            margin: 50px auto 0;
+
+            .mediaArticle{
+                max-width: calc(100% / 2 - 10px);
+                margin-right: 10px;
+
+                &__thumb{
+                    height: 300px;
+                    margin: 0 0 20px;
+                }
+                h3{
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+                .info{
+                    &__date,
+                    &__place{
+                        font-size: 13px;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 420px){
+    .mediaMain{
+        &__list{
+            margin: 50px auto 0;
+
+            .mediaArticle{
+                max-width: 100%;
+                margin-right: 0;
+
+                &__thumb{
+                    height: 300px;
+                    margin: 0 0 20px;
+                }
+                h3{
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+                .info{
+                    &__date,
+                    &__place{
+                        font-size: 13px;
+                        line-height: 16px;
+                    }
                 }
             }
         }

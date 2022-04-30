@@ -5,7 +5,7 @@
 get_header(); ?>
 
 <main class="iam iam--offer">
-    <section class="subpageHeader" style="background-image: url('<?php echo get_field('subpageHeader_bg'); ?>');">
+    <section class="subpageHeader subpageHeader--offer" style="background-image: url('<?php echo get_field('subpageHeader_bg'); ?>');">
         <div class="subpageHeader__wrap container-lg">
             <div class="subpageHeader__content">
                 <h1><?php echo get_the_title(); ?></h1>

@@ -56,6 +56,95 @@
         }
     }
 }
+@media (max-width: 1249px){
+    .aboutMain{
+        &__boxes{
+            margin: 0 0 100px;
+        }
+    }
+}
+@media (max-width: 991px){
+    .aboutMain{
+        &__image{
+            margin: 0 0 50px;
+        }
+        &__content{
+            margin: 0 0 80px;
+
+            h3{
+                font-size: 26px;
+                line-height: 35px;
+            }
+        }
+        &__boxes{
+            flex-wrap: wrap;
+
+            .box{
+                width: calc(100% / 2 - 10px);
+                max-width: none;
+                margin: 0 0 30px;
+
+                &:last-of-type{
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .aboutMain{
+        &__image{
+            height: 320px;
+            margin: 0 0 30px;
+        }
+        &__content{
+            margin: 0 0 50px;
+
+            h3{
+                font-size: 21px;
+                line-height: 30px;
+            }
+        }
+        &__boxes{
+            flex-wrap: nowrap;
+            flex-direction: column;
+            margin: 0 0 40px;
+
+            .box{
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .aboutMain{
+        &__content{
+            padding: 0 20px;
+
+            h3{
+                br{
+                    display: none;
+                }
+            }
+        }
+        &__boxes{
+            padding: 0 20px;
+
+            .box{
+                h3{
+                    font-size: 21px;
+                    line-height: 28px;
+                    margin: 0 0 10px;
+                }
+                p{
+                    font-size: 13px;
+                    line-height: 21px;
+                }
+            }
+        }
+    }
+}
 
 .aboutOwner{
     padding: 0 0 172px;
@@ -134,6 +223,107 @@
                 text-align: left;
                 margin: 0;
                 padding: 0 8px;
+            }
+        }
+    }
+}
+@media (max-width: 1249px){
+    .aboutOwner{
+        &__wrap{
+            &:after{
+                right: 14px;
+                bottom: -24px;
+            }
+        }
+        &__image{
+            .image{
+                top: 20px;
+                left: -20px;
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .aboutOwner{
+        &__wrap{
+            max-width: 720px;
+            padding: 40px 30px 70px 0;
+        }
+        &__image{
+            max-width: 290px;
+
+            .image{
+                display: block;
+                max-width: inherit;
+                width: 100%;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+        &__content{
+            max-width: calc(100% - 290px);
+
+            p{
+                &.lead{
+                    font-size: 14px;
+                    line-height: 19px;
+                    letter-spacing: 6px;
+                    margin: 0 0 20px;
+                }
+                &.main{
+                    br{
+                        display: none;
+                    }
+                    &:after{
+                        height: 50px;
+                        margin: 20px auto;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .aboutOwner{
+        padding: 0 0 100px;
+
+        &__wrap{
+            flex-direction: column;
+            padding: 20px 20px 60px;
+            max-width: 100%;
+        }
+        &__image{
+            width: 100%;
+            max-width: 100%;
+            margin: 0 0 30px;
+
+            .image{
+                position: relative;
+                top: auto;
+                left: auto;
+                transform: none;
+                max-width: 280px;
+                margin: 0 auto;
+            }
+        }
+        &__content{
+            max-width: 100%;
+            width: 100%;
+
+            p{
+                &.content{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .aboutOwner{
+        &__wrap{
+            &:after{
+                bottom: -16px;
+                font-size: 40px;
             }
         }
     }

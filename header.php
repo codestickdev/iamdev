@@ -32,7 +32,11 @@
 				</a>
 			</div>
 			<nav class="siteHeader__nav">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'iamdev' ); ?></button>
+				<button class="toggleMenu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
 				<?php
 					wp_nav_menu(
 						array(
