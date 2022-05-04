@@ -17,11 +17,11 @@
         margin: 0 0 100px;
 
         h3{
-            font-size: 36px;
-            line-height: 45px;
+            font-size: 46px;
+            line-height: 50px;
             color: v.$fontblack;
-            font-weight: 400;
-            font-family: 'Domine', sans-serif;
+            font-weight: 300;
+            font-family: 'Portrait', sans-serif;
             margin: 0;
             text-align: right;
         }
@@ -40,7 +40,7 @@
                 font-size: 32px;
                 line-height: 40px;
                 color: v.$gold_light;
-                font-family: 'Domine', sans-serif;
+                font-family: 'Portrait', sans-serif;
                 font-weight: 400;
                 margin: 0 0 20px;
                 text-align: left;
@@ -72,8 +72,8 @@
             margin: 0 0 80px;
 
             h3{
-                font-size: 26px;
-                line-height: 35px;
+                font-size: 36px;
+                line-height: 40px;
             }
         }
         &__boxes{
@@ -102,8 +102,8 @@
             margin: 0 0 50px;
 
             h3{
-                font-size: 21px;
-                line-height: 30px;
+                font-size: 26px;
+                line-height: 32px;
             }
         }
         &__boxes{
@@ -123,6 +123,9 @@
             padding: 0 20px;
 
             h3{
+                font-size: 21px;
+                line-height: 26px;
+                
                 br{
                     display: none;
                 }

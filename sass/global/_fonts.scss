@@ -35,6 +35,17 @@
     src: url('/wp-content/themes/iamdev/fonts/Domine/Domine-Bold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Portrait';
+    font-weight: 300;
+    src: url('/wp-content/themes/iamdev/fonts/Portrait/Portrait-Light.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Portrait';
+    font-weight: 400;
+    src: url('/wp-content/themes/iamdev/fonts/Portrait/Portrait-Regular.otf') format('opentype');
+}
+
 
 body{
     font-family: 'Poppins', sans-serif;

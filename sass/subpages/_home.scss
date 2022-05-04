@@ -43,10 +43,10 @@
                 }
             }
             h2{
-                font-size: 60px;
-                line-height: 72px;
-                font-family: 'Domine', sans-serif;
-                font-weight: 400;
+                font-size: 70px;
+                line-height: 75px;
+                font-family: 'Portrait', sans-serif;
+                font-weight: 300;
                 color: v.$fontblack;
                 max-width: 700px;
                 margin: 0 0 20px;
@@ -361,9 +361,9 @@
         }
         h2{
             font-size: 60px;
-            line-height: 72px;
-            font-family: 'Domine', sans-serif;
-            font-weight: 400;
+            line-height: 66px;
+            font-family: 'Portrait', sans-serif;
+            font-weight: 300;
             color: #fff;
             margin: 0 0 20px;
             text-align: left;
@@ -379,8 +379,8 @@
 
             .content{
                 p{
-                    font-size: 16px;
-                    line-height: 25px;
+                    font-size: 14px;
+                    line-height: 22px;
                     max-width: 430px;
                     margin: 0;
                     color: #fff;
@@ -391,8 +391,8 @@
             width: calc(100% / 2);
 
             p{
-                font-size: 16px;
-                line-height: 25px;
+                font-size: 14px;
+                line-height: 22px;
                 max-width: 520px;
                 margin: 0 0 30px;
                 color: #fff;
@@ -435,7 +435,7 @@
         }
     }
     &__info{
-        padding-top: 320px;
+        padding-top: 180px;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -445,8 +445,8 @@
             width: calc(100% / 2 - 10px);
 
             p{
-                font-size: 16px;
-                line-height: 25px;
+                font-size: 14px;
+                line-height: 22px;
                 font-weight: 300;
                 color: #484848;
                 max-width: 510px;
@@ -458,7 +458,7 @@
 @media (max-width: 1249px){
     .homeAbout{
         &__info{
-            padding-top: 200px;
+            padding-top: 160px;
         }
     }
 }
@@ -641,10 +641,10 @@
             }
 
             h3{
-                font-size: 60px;
-                line-height: 72px;
-                font-family: 'Domine', sans-serif;
-                font-weight: 400;
+                font-size: 70px;
+                line-height: 76px;
+                font-family: 'Portrait', sans-serif;
+                font-weight: 300;
                 color: v.$fontblack;
                 margin: 0 0 15px;
                 text-align: left;
@@ -787,14 +787,14 @@
             }
         }
         h2{
-            font-size: 60px;
-            line-height: 72px;
-            font-family: 'Domine', sans-serif;
-            font-weight: 400;
+            font-size: 70px;
+            line-height: 76px;
+            font-family: 'Portrait', sans-serif;
+            font-weight: 300;
             color: #fff;
             margin: 0;
             text-align: left;
-            max-width: 490px;
+            max-width: 420px;
         }
     }
     &__list{
@@ -814,16 +814,16 @@
                 }
             }
             &__title{
-                font-size: 28px;
-                line-height: 34px;
+                font-size: 34px;
+                line-height: 38px;
                 font-weight: 400;
-                font-family: 'Domine', sans-serif;
+                font-family: 'Portrait', sans-serif;
                 color: v.$gold;
-                margin: 35px 0;
+                margin: 35px 0 25px;
             }
             &__desc{
-                font-size: 16px;
-                line-height: 25px;
+                font-size: 14px;
+                line-height: 22px;
                 color: #fff;
                 text-align: left;
                 margin: 0;
@@ -957,8 +957,8 @@
             margin: 0 0 25px;
 
             li{
-                font-size: 16px;
-                line-height: 25px;
+                font-size: 14px;
+                line-height: 22px;
                 color: v.$fontblack;
                 padding-left: 21px;
                 margin: 0 0 3px;
@@ -982,8 +982,8 @@
             }
         }
         &>p{
-            font-size: 16px;
-            line-height: 25px;
+            font-size: 14px;
+            line-height: 22px;
             color: #484848;
             margin: 0;
         }
@@ -1004,9 +1004,9 @@
             }
         }
         h2{
-            font-size: 50px;
-            line-height: 62px;
-            font-family: 'Domine', sans-serif;
+            font-size: 60px;
+            line-height: 64px;
+            font-family: 'Portrait', sans-serif;
             font-weight: 400;
             color: v.$fontblack;
             margin: 0;
@@ -1214,16 +1214,16 @@
         h2{
             font-size: 50px;
             line-height: 62px;
-            font-family: 'Domine', sans-serif;
-            font-weight: 400;
+            font-family: 'Portrait', sans-serif;
+            font-weight: 300;
             color: v.$fontblack;
             margin: 0 0 10px;
             text-align: left;
         }
         .title{
-            font-size: 50px;
-            line-height: 62px;
-            font-family: 'Domine', sans-serif;
+            font-size: 60px;
+            line-height: 66px;
+            font-family: 'Portrait', sans-serif;
             font-weight: 400;
             color: v.$fontblack;
             margin: 0;
