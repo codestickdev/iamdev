@@ -55,6 +55,9 @@
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+<?php if(!current_user_can('administrator')): ?>
+	<div id="bubbleCursor"></div>
+<?php endif; ?>
 
 <?php wp_footer(); ?>
 

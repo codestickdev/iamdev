@@ -70,5 +70,34 @@
             menuMobile.removeClass('menuMobile--active');
         });
     });
+
+    /**
+     * Cursor
+     */
+    $(document).ready(function(){
+        $(document).on('mousemove', function(e){
+            if($('#bubbleCursor').length){
+                var target = $(e.target);
+                    currentCursor = target.cursor();
     
+                $('#bubbleCursor').addClass('visible');
+    
+                if(currentCursor == 'pointer'){
+                    target.cursor('none');
+                }else if(currentCursor == 'none'){
+                    $('#bubbleCursor').addClass('pointer');
+                }else{
+                    $('#bubbleCursor').removeClass('pointer');
+                }
+    
+                var offsetTop = $(window).scrollTop();
+                var left = e.pageX - 15;
+                var top = e.pageY - 20 - offsetTop;
+                
+                $('#bubbleCursor').css({
+                    transform: ' matrix(1, 0, 0, 1, ' + left + ', ' + top + ')',
+                });
+            }
+        });
+    });
 }(jQuery));

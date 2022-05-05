@@ -254,3 +254,65 @@ a{
         }
     }
 }
+
+#bubbleCursor{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    z-index: 99999999;
+    pointer-events: none;
+    opacity: 0;
+    transition: transform 0.07s, width 0.3s, height 0.3s;
+  
+    @media not all and (min-resolution:.001dpcm){
+        @supports (-webkit-appearance:none){
+            transition: transform 0s, width 0.3s, height 0.3s;
+        }
+    }
+  
+    &.visible{
+        opacity: .5;
+    }
+  
+    &.pointer{
+        width: 40px;
+        height: 40px;
+
+        &:after{
+            // transform: rotate(-120deg);
+            left: -4px;
+            // top: 8px;
+        }
+    }
+  
+    &:after{
+        content: '';
+        background-image: url('/wp-content/themes/iamdev/images/cursor.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 100%;
+        width: 100%;
+        display: block;
+        left: 0;
+        top: 0;
+        position: relative;
+        transition: ease .3s;
+    }
+}
+@media not all and (min-resolution:.001dpcm){
+    @supports (-webkit-appearance:none){
+        #bubbleCursor{
+            &.pointer{
+                width: 30px;
+                height: 30px;
+
+                &:after{
+                    left: auto;
+                    transform: scale(1.3);
+                }
+            }
+        }
+    }
+}

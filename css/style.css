@@ -2182,8 +2182,8 @@ body.page-template-page_home .siteHeader__logo {
   opacity: 0.7;
 }
 .homePortfolio__content h2 {
-  font-size: 50px;
-  line-height: 62px;
+  font-size: 44px;
+  line-height: 50px;
   font-family: "Portrait", sans-serif;
   font-weight: 300;
   color: #0b0b19;
@@ -2191,8 +2191,8 @@ body.page-template-page_home .siteHeader__logo {
   text-align: left;
 }
 .homePortfolio__content .title {
-  font-size: 60px;
-  line-height: 66px;
+  font-size: 50px;
+  line-height: 58px;
   font-family: "Portrait", sans-serif;
   font-weight: 400;
   color: #0b0b19;
@@ -4616,6 +4616,60 @@ a:focus {
   .btn span {
     font-size: 12px;
     letter-spacing: 2px;
+  }
+}
+#bubbleCursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  z-index: 99999999;
+  pointer-events: none;
+  opacity: 0;
+  transition: transform 0.07s, width 0.3s, height 0.3s;
+}
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    #bubbleCursor {
+      transition: transform 0s, width 0.3s, height 0.3s;
+    }
+  }
+}
+#bubbleCursor.visible {
+  opacity: 0.5;
+}
+#bubbleCursor.pointer {
+  width: 40px;
+  height: 40px;
+}
+#bubbleCursor.pointer:after {
+  left: -4px;
+}
+#bubbleCursor:after {
+  content: "";
+  background-image: url("/wp-content/themes/iamdev/images/cursor.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100%;
+  width: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  position: relative;
+  transition: ease 0.3s;
+}
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    #bubbleCursor.pointer {
+      width: 30px;
+      height: 30px;
+    }
+    #bubbleCursor.pointer:after {
+      left: auto;
+      transform: scale(1.3);
+    }
   }
 }
 

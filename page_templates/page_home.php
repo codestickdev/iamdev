@@ -141,15 +141,15 @@ get_header(); ?>
         $portfolio = get_field('homePortfolio');
     ?>
     <section class="homePortfolio">
-        <div class="homePortfolio__wrap container">
-            <div class="homePortfolio__images" data-aos="fade-right">
+        <div class="homePortfolio__wrap container" data-aos="fade-up">
+            <div class="homePortfolio__images">
                 <?php foreach($portfolio as $project): ?>
                 <div class="image" data-url="<?php echo get_permalink($project->ID); ?>" data-title="<?php echo $project->post_title; ?>" data-desc="<?php echo get_field('mainRealization_featureddesc', $project->ID); ?>">
                     <img src="<?php echo get_field('mainRealization_featuredimage', $project->ID)['url']; ?>" alt="<?php echo get_field('mainRealization_featuredimage', $project->ID)['alt']; ?>"/>
                 </div>
                 <?php endforeach; ?>
             </div>
-            <div class="homePortfolio__content" data-aos="fade-left">
+            <div class="homePortfolio__content">
                 <p class="lead">Ostatnie projekty<span>/</span><a href="<?php echo get_permalink($portfolio[0]->ID); ?>" class="link">Zobacz</a></p>
                 <h2>Nasze realizacje</h2>
                 <h3 class="title"><?php echo $portfolio[0]->post_title; ?></h3>

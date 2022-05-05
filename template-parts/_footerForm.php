@@ -26,13 +26,13 @@
                 </div>
             </div>
             <div class="contactForm__row">
-                <div class="contactForm__field" error-msg="To pole jest wymagane">
+                <div class="contactForm__field">
                     <textarea name="contactMessage" placeholder="Wiadomość"></textarea>
                 </div>
             </div>
             <?php if($page == 'career'): ?>
             <div class="contactForm__row">
-                <div class="contactForm__field" error-msg="To pole jest wymagane">
+                <div class="contactForm__field">
                     <input class="contactFile" id="contactFile" type="file" name="contactFile" optional="true">
                     <div class="uploadFile">
                         <p>Dołącz CV (max. 2MB)</p>

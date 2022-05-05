@@ -23,6 +23,9 @@ get_header(); ?>
                     <h2><?php echo get_the_title(); ?></h2>
                 </div>
             </div>
+            <div class="termsMain__content">
+                <?php the_content(); ?>
+            </div>
         </div>
     </section>
 </main>

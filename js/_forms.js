@@ -14,13 +14,6 @@
             }
         });
 
-        if(textarea.val() !== ''){
-            console.log('jest');
-        }else{
-            let textareaName = textarea.attr('name');
-            response.push(textareaName);
-        }
-
         if(!checkbox.parent().hasClass('checked')){
             response.push(checkbox.attr('name'));
         }

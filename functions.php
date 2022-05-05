@@ -162,6 +162,10 @@ function iamdev_scripts() {
 	wp_register_script( 'slick-script', get_template_directory_uri() . '/plugins/slick/slick.min.js', null, null, true );
 	wp_enqueue_script('slick-script');
 
+	// Cursor plugin
+	wp_register_script( 'cursor-js', get_template_directory_uri() . '/plugins/cursor/cursor.js', null, null, true );
+	wp_enqueue_script('cursor-js');
+
 	// Animations
 	wp_register_script('iamdev-animations', get_template_directory_uri() . '/js/_animations.js', array(), false, false);
 	wp_enqueue_script('iamdev-animations');
