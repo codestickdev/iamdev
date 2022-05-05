@@ -28,7 +28,7 @@
 		<div class="siteHeader__wrap container-lg">
 			<div class="siteHeader__logo">
 				<a href="<?php echo get_home_url('/'); ?>">
-					<img src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>"/>
+					<img src="<?php echo get_template_directory_uri() . '/images/iam_logo_dark.svg'; ?>"/>
 				</a>
 			</div>
 			<nav class="siteHeader__nav">
@@ -48,3 +48,16 @@
 			</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
+	<div class="menuMobile">
+		<div class="menuMobile__close"></div>
+		<div class="menuMobile__wrap">
+			<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					)
+				);
+			?>
+		</div>
+	</div>

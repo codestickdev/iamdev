@@ -15,7 +15,7 @@
 		<div class="siteFooter__wrap container">
 			<div class="siteFooter__logo">
 				<div class="logo">
-					<img src="<?php echo get_template_directory_uri() . '/images/logo_white.svg'; ?>"/>
+					<img src="<?php echo get_template_directory_uri() . '/images/iam_logo_light.svg'; ?>"/>
 				</div>
 				<p>Działamy w całej Polsce!</p>
 			</div>

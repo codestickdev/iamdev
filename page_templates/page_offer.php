@@ -14,8 +14,9 @@ get_header(); ?>
         <a href="tel:516004957" class="subpageHeader__phone">
             <span>516 004 957</span>
         </a>
+        <a href="#first" class="subpageHeader__scroll"></a>
     </section>
-    <section class="offerMain">
+    <section id="first" class="offerMain">
         <div class="offerMain__wrap container">
             <div class="sectionCenterHeading">
                 <div class="sectionCenterHeading__wrap">
@@ -24,10 +25,10 @@ get_header(); ?>
                 </div>
             </div>
             <div class="offerRow">
-                <div class="offerRow__image">
+                <div class="offerRow__image" data-aos="fade-right">
                     <img src="<?php echo get_field('offerMain_images')[0]['url']; ?>"/>
                 </div>
-                <div class="offerRow__content">
+                <div class="offerRow__content" data-aos="fade-left">
                     <?php
                         $i = 0;
                         while(have_rows('offerMain')): the_row();
@@ -57,10 +58,10 @@ get_header(); ?>
                 </div>
             </div>
             <div class="offerRow offerRow--reverse">
-                <div class="offerRow__image">
+                <div class="offerRow__image" data-aos="fade-left">
                     <img src="<?php echo get_field('offerMain_images')[1]['url']; ?>"/>
                 </div>
-                <div class="offerRow__content">
+                <div class="offerRow__content" data-aos="fade-right">
                     <?php
                         $b = 0;
                         while(have_rows('offerMain')): the_row();
@@ -91,10 +92,10 @@ get_header(); ?>
                 </div>
             </div>
             <div class="offerRow">
-                <div class="offerRow__image">
+                <div class="offerRow__image" data-aos="fade-right">
                     <img src="<?php echo get_field('offerMain_images')[2]['url']; ?>"/>
                 </div>
-                <div class="offerRow__content">
+                <div class="offerRow__content" data-aos="fade-left">
                     <?php
                         $b = 0;
                         while(have_rows('offerMain')): the_row();
@@ -135,7 +136,7 @@ get_header(); ?>
                     $list = get_sub_field('offerMain_list');
 
                 if($b > 5): ?>
-                <div class="offerRow__content">
+                <div class="offerRow__content" data-aos="fade-up">
                     <div class="offerRow__sec">
                         <h3><?php echo $name; ?></h3>
                         <div class="desc">
@@ -159,10 +160,10 @@ get_header(); ?>
     </section>
     <section class="offerInfo">
         <div class="offerInfo__wrap">
-            <h3>Zaprojektujemy dla Ciebie najefektywniejsze <br/>
+            <h3 data-aos="fade-up">Zaprojektujemy dla Ciebie najefektywniejsze <br/>
                 rodzaje reklam i poprowadzimy kampanie. <br/>
                 Dołącz do wielu zadowolonych klientów!</h3>
-            <a href="/kontakt" class="btn btn--article"><span>Sprawdź nas</span></a>
+            <a href="/kontakt" class="btn btn--article" data-aos="fade-up"><span>Sprawdź nas</span></a>
         </div>
     </section>
 </main>

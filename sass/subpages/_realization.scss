@@ -1,5 +1,12 @@
 @use '../global/variables' as v;
 
+.iam{
+    &--realization{
+        .subpageHeader{
+            min-height: 350px;
+        }
+    }
+}
 .mainRealization{
     padding: 85px 0;
 

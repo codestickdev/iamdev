@@ -14,21 +14,22 @@ get_header(); ?>
         <a href="tel:516004957" class="subpageHeader__phone">
             <span>516 004 957</span>
         </a>
+        <a href="#first" class="subpageHeader__scroll"></a>
     </section>
-    <section class="aboutMain container">
+    <section id="first" class="aboutMain container">
         <div class="sectionCenterHeading">
-            <div class="sectionCenterHeading__wrap">
+            <div class="sectionCenterHeading__wrap" data-aos="fade-up">
                 <p class="lead">Poznaj nas</p>
                 <h2>Agencja I AM</h2>
             </div>
         </div>
-        <div class="aboutMain__image">
+        <div class="aboutMain__image" data-aos="fade-up">
             <img src="<?php echo get_field('aboutMain_image')['url']; ?>" alt="<?php echo get_field('aboutMain_image')['alt']; ?>"/>
         </div>
-        <div class="aboutMain__content">
+        <div class="aboutMain__content" data-aos="fade-left">
             <h3><?php echo get_field('aboutMain_text'); ?></h3>
         </div>
-        <div class="aboutMain__boxes">
+        <div class="aboutMain__boxes" data-aos="fade-up">
             <?php while(have_rows('aboutMain_box')): the_row();
                 $title = get_sub_field('aboutMain_box_title');
                 $content = get_sub_field('aboutMain_box_content');
@@ -48,7 +49,7 @@ get_header(); ?>
                     <img src="<?php echo get_field('mainOwner_image')['url']; ?>" alt="<?php echo get_field('mainOwner_image')['alt']; ?>"/>
                 </div>
             </div>
-            <div class="aboutOwner__content">
+            <div class="aboutOwner__content" data-aos="fade-up">
                 <p class="lead"><?php echo get_field('mainOwner_name'); ?></p>
                 <p class="main"><?php echo get_field('mainOwner_main') ?></p>
                 <p class="content"><?php echo get_field('mainOwner_content'); ?></p>

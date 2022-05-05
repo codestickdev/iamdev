@@ -25,12 +25,12 @@ $current = get_the_ID(); ?>
 	<section class="mainRealization container">
         <div class="mainRealization__heading">
             <?php if(get_field('mainRealization_logo')): ?>
-            <div class="projectLogo">
+            <div class="projectLogo" data-aos="fade-up">
                 <img src="<?php echo get_field('mainRealization_logo')['url']; ?>" alt="<?php echo get_field('mainRealization_logo')['alt']; ?>"/>
             </div>
             <?php endif; ?>
             <div class="sectionCenterHeading sectionCenterHeading--noline sectionCenterHeading--wide">
-                <div class="sectionCenterHeading__wrap">
+                <div class="sectionCenterHeading__wrap" data-aos="fade-up">
                     <p class="lead">Inwestycja deweloperska</p>
                     <h2>Wizualizacje zewnętrzne</h2>
                 </div>
@@ -39,7 +39,7 @@ $current = get_the_ID(); ?>
                 <p>Stworzenie wizualizacji zewnętrznych luksusowych rezydencji w Konstancinie.</p>
             </div>
         </div>
-        <div class="mainRealization__info">
+        <div class="mainRealization__info" data-aos="fade-up">
             <?php
                 $count = 0;
                 while(have_rows('mainRalization_info')){
@@ -60,7 +60,7 @@ $current = get_the_ID(); ?>
             if($images): ?>
             <div class="gallery">
                 <?php foreach($images as $image): ?>
-                <div class="gallery__image">
+                <div class="gallery__image" data-aos="fade-up">
                     <div class="image">
                         <img src="<?php echo $image['url']; ?>"/>
                     </div>
@@ -80,7 +80,7 @@ $current = get_the_ID(); ?>
             );              
             $the_query = new WP_Query( $args );
             if($the_query->have_posts() ) : ?>
-			<div class="mainRealization__more">
+			<div class="mainRealization__more" data-aos="fade-up">
 				<h2>Zobacz też</h2>
                 <div class="realizations">
                     <?php while($the_query->have_posts()): $the_query->the_post(); ?>

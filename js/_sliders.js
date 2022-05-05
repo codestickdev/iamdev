@@ -26,6 +26,7 @@
         $('.homeTestimonials__wrap').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
+            autoplay: true,
             arrows: true,
             dots: false,
         });
@@ -51,9 +52,37 @@
         $('.homePortfolio__images').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            adaptiveHeight: true,
+            adaptiveHeight: false,
             arrows: true,
             dots: false,
+        });
+
+        // Trust us
+        $('.homeTrusted__list').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            pauseOnHover: false,
+            pauseOnFocus: false,
+            arrows: false,
+            dots: false,
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1,
+                        centerMode: true,
+                        variableWidth: true,
+                    }
+                }
+            ]
         });
     });
 }(jQuery));

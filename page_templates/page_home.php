@@ -21,17 +21,11 @@ get_header(); ?>
                 <?php endwhile; ?>
             </div>
             <div class="homeSlider__social">
-                <a href="#" target="_blank">
+                <a href="https://www.facebook.com/wwwagencjaiam" target="_blank">
                     <img src="<?php echo get_template_directory_uri() . '/images/icons/social_fb.svg'; ?>"/>
                 </a>
-                <a href="#" target="_blank">
+                <a href="https://www.instagram.com/iam_agencja_marketingowa/" target="_blank">
                     <img src="<?php echo get_template_directory_uri() . '/images/icons/social_ig.svg'; ?>"/>
-                </a>
-                <a href="#" target="_blank">
-                    <img src="<?php echo get_template_directory_uri() . '/images/icons/social_yt.svg'; ?>"/>
-                </a>
-                <a href="#" target="_blank">
-                    <img src="<?php echo get_template_directory_uri() . '/images/icons/social_tw.svg'; ?>"/>
                 </a>
             </div>
         </div>
@@ -43,11 +37,12 @@ get_header(); ?>
         <a href="tel:516004957" class="homeSlider__phone">
             <span>516 004 957</span>
         </a>
+        <a href="#about" class="homeSlider__scroll"></a>
     </header>
 
-    <section class="homeAbout">
+    <section id="about" class="homeAbout">
         <div class="homeAbout__wrap">
-            <div class="homeAbout__content container">
+            <div class="homeAbout__content container" data-aos="fade-up">
                 <div class="left">
                     <div class="homeAbout__heading">
                         <p class="lead">O nas</p>
@@ -63,7 +58,7 @@ get_header(); ?>
                     <?php endwhile; ?>
                 </div>
             </div>
-            <div class="homeAbout__images container">
+            <div class="homeAbout__images container" data-aos="fade-up">
                 <div class="left">
                     <div class="image">
                         <img src="<?php echo get_field('homeAbout_image_left')['url']; ?>" alt="<?php echo get_field('homeAbout_image_left')['alt']; ?>"/>
@@ -76,7 +71,7 @@ get_header(); ?>
                 </div>
             </div>  
         </div>
-        <div class="homeAbout__info container">
+        <div class="homeAbout__info container" data-aos="fade-up">
             <div class="left">
                 <p><?php echo get_field('homeAbout_content_left'); ?></p>
             </div>
@@ -87,13 +82,13 @@ get_header(); ?>
     </section>
 
     <section class="homeTestimonials">
-        <div class="homeTestimonials__wrap container">
+        <div class="homeTestimonials__wrap container" data-aos="fade-up">
             <?php while(have_rows('homeTestimonials')): the_row();
                 $content = get_sub_field('homeTestimonials_content');
                 $author = get_sub_field('homeTestimonials_author');
             ?>
             <div class="testi">
-                <h3><b>“</b><?php echo $content; ?><b>”</b></h3>
+                <h3><a href="<?php echo home_url('/referencje'); ?>"><b>“</b><?php echo $content; ?><b>”</b></a></h3>
                 <p class="testi__author"><?php echo $author; ?></p>
             </div>
             <?php endwhile; ?>
@@ -102,11 +97,11 @@ get_header(); ?>
 
     <section class="homePlan">
         <div class="homePlan__wrap container">
-            <div class="homePlan__heading">
+            <div class="homePlan__heading" data-aos="fade-up">
                 <p class="lead">Jak działamy</p>
                 <h2>Skuteczny model działania</h2>
             </div>
-            <div class="homePlan__list">
+            <div class="homePlan__list" data-aos="fade-up">
                 <?php while(have_rows('homePlan')): the_row();
                     $icon = get_sub_field('homePlan_icon');
                     $title = get_sub_field('homePlan_title');
@@ -129,14 +124,14 @@ get_header(); ?>
 
     <section class="homeExp">
         <div class="homeExp__wrap container">
-            <div class="homeExp__content">
+            <div class="homeExp__content" data-aos="fade-right">
                 <div class="homeExp__heading">
                     <p class="lead">Doświadczenie</p>
                     <h2><?php echo get_field('homeExp_title'); ?></h2>
                 </div>
                 <?php echo get_field('homeExp_content'); ?>
             </div>
-            <div class="homeExp__image">
+            <div class="homeExp__image" data-aos="fade-left">
                 <img src="<?php echo get_field('homeExp_image')['url']; ?>" alt="<?php echo get_field('homeExp_image')['alt']; ?>"/>
             </div>
         </div>
@@ -147,14 +142,14 @@ get_header(); ?>
     ?>
     <section class="homePortfolio">
         <div class="homePortfolio__wrap container">
-            <div class="homePortfolio__images">
+            <div class="homePortfolio__images" data-aos="fade-right">
                 <?php foreach($portfolio as $project): ?>
                 <div class="image" data-url="<?php echo get_permalink($project->ID); ?>" data-title="<?php echo $project->post_title; ?>" data-desc="<?php echo get_field('mainRealization_featureddesc', $project->ID); ?>">
                     <img src="<?php echo get_field('mainRealization_featuredimage', $project->ID)['url']; ?>" alt="<?php echo get_field('mainRealization_featuredimage', $project->ID)['alt']; ?>"/>
                 </div>
                 <?php endforeach; ?>
             </div>
-            <div class="homePortfolio__content">
+            <div class="homePortfolio__content" data-aos="fade-left">
                 <p class="lead">Ostatnie projekty<span>/</span><a href="<?php echo get_permalink($portfolio[0]->ID); ?>" class="link">Zobacz</a></p>
                 <h2>Nasze realizacje</h2>
                 <h3 class="title"><?php echo $portfolio[0]->post_title; ?></h3>

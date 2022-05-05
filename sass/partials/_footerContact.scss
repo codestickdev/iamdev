@@ -31,6 +31,34 @@
     }
 }
 .contactForm{
+    transition: ease .5s;
+    opacity: 1;
+
+    &.loading{
+        opacity: .5;
+    }
+    &__alert{
+        display: none;
+        background-color: #9ec693;
+        border-radius: 5px;
+        padding: 5px 10px;
+        text-align: center;
+        margin: 0 0 30px;
+
+        p{
+            font-size: 14px;
+            line-height: 19px;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+        }
+        &--visible{
+            display: block;
+        }
+        &--error{
+            background-color: #d84d4d;
+        }
+    }
     &__row{
         margin: 0 0 35px;
 
@@ -42,19 +70,45 @@
             .contactForm__field{
                 width: 100%;
                 max-width: 485px;
-                padding: 0 10px;
+                margin: 0 10px;
 
                 &:first-of-type{
-                    padding-left: 0;
+                    margin-left: 0;
                 }
                 &:last-of-type{
-                    padding-right: 0;
+                    margin-right: 0;
                 }
             }
         }
     }
 
     &__field{
+        position: relative;
+
+        &.input-error{
+            &:after{
+                display: block;
+            }
+            input:not([type="file"]),
+            textarea{
+                border-bottom-color: #d84d4d;
+
+                &::placeholder{
+                    color: #d84d4d;
+                }
+            }
+        }
+        &:after{
+            content: attr(error-msg);
+            font-size: 11px;
+            color: #d84d4d;
+            font-weight: 500;
+            line-height: 1;
+            position: absolute;
+            left: 0;
+            bottom: -17px;
+            display: none;
+        }
         input:not([type="file"]),
         textarea{
             width: 100%;
@@ -65,7 +119,7 @@
             padding: 0;
             font-size: 14px;
             font-weight: 500;
-            color: v.$gold;
+            color: #000;
             background-color: transparent;
             outline: none;
             resize: none;
@@ -115,11 +169,32 @@
         position: relative;
         max-width: 720px;
 
+        &:after{
+            content: attr(error-msg);
+            font-size: 11px;
+            color: #d84d4d;
+            font-weight: 500;
+            line-height: 1;
+            position: absolute;
+            left: 0;
+            bottom: -17px;
+            display: none;
+        }
+
         &.checked{
             .input{
                 &:before{
                     opacity: 1;
                 }
+            }
+        }
+
+        &.input-error{
+            &:after{
+                display: block;
+            }
+            .input{
+                border: 1px solid #d84d4d;
             }
         }
 
@@ -222,10 +297,10 @@
 
                 .contactForm__field{
                     max-width: 100%;
-                    padding: 0 !important;
+                    margin: 0 !important;
 
                     &:first-of-type{
-                        margin: 0 0 30px;
+                        margin: 0 0 30px !important;
                     }
                 }
             }

@@ -14,11 +14,12 @@ get_header(); ?>
         <a href="tel:516004957" class="subpageHeader__phone">
             <span>516 004 957</span>
         </a>
+        <a href="#first" class="subpageHeader__scroll"></a>
     </section>
-    <section class="realizationsHeader">
+    <section id="first" class="realizationsHeader">
         <div class="realizationsHeader__wrap">
             <div class="sectionCenterHeading">
-                <div class="sectionCenterHeading__wrap">
+                <div class="sectionCenterHeading__wrap" data-aos="fade-up">
                     <p class="lead">Przykładowe realizacje</p>
                     <h2>Z każdej naszej współpracy jesteśmy niezwykle dumni</h2>
                 </div>
@@ -30,7 +31,7 @@ get_header(); ?>
                 'orderby'   => 'term_id',
             ));
             if ( ! empty( $terms ) && ! is_wp_error( $terms ) ): ?>
-            <div class="realizationsHeader__categories">
+            <div class="realizationsHeader__categories" data-aos="fade-up">
                 <div class="cat cat--active" data-name="wszystkie">
                     <p>Wszystkie</p>
                 </div>
@@ -54,7 +55,7 @@ get_header(); ?>
     <section class="realizationsList">
         <div class="realizationsList__wrap container">
             <?php while($the_query->have_posts()): $the_query->the_post(); ?>
-            <a href="<?php echo get_the_permalink(); ?>" class="realization" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');">
+            <a href="<?php echo get_the_permalink(); ?>" class="realization" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');" data-aos="fade-up">
                 <div class="realization__cover">
                     <h3><?php echo get_the_title(); ?></h3>
                 </div>

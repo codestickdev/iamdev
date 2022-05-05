@@ -1,5 +1,23 @@
 @use '../global/variables' as v;
 
+.iam{
+    &--home{
+        overflow: hidden;
+    }
+}
+
+@keyframes PulseDown {
+    0% {
+        transform: translate(0, -5px);
+    }
+    50% {
+        transform: translate(0, 5px);
+    }
+    100% {
+        transform: translate(0, -5px);
+    }
+}
+
 .homeSlider{
     display: flex;
     justify-content: space-between;
@@ -117,8 +135,10 @@
         justify-content: flex-end;
 
         &:hover{
+            @include v.gold_gradient_bg_hover;
+
             span{
-                opacity: .7;
+                transform: scale(1.07);
             }
         }
 
@@ -145,6 +165,44 @@
                 transform: translate(0, -50%);
                 filter: invert(1);
             }
+        }
+    }
+    &__scroll{
+        width: 50px;
+        height: 50px;
+        border: 1px solid v.$gold_light;
+        border-radius: 100%;
+        position: absolute;
+        bottom: -70px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        animation-name: PulseDown;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        transition: ease .3s;
+
+        &:hover{
+            opacity: .75;
+
+            &:after{
+                transform: translate(0, -50%) rotate(45deg);
+            }
+        }
+
+        &:after{
+            content: '';
+            width: 15px;
+            height: 15px;
+            border-right: 1px solid v.$gold_light;
+            border-bottom: 1px solid v.$gold_light;
+            transform: translate(0, -75%) rotate(45deg);
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transition: ease .3s;
         }
     }
     &__social{
@@ -267,7 +325,7 @@
                 height: 50px;
                 background-color: #fff;
                 position: absolute;
-                bottom: 0;
+                bottom: -1px;
                 left: 0;
                 clip-path: polygon(100% 0, 100% 100%, 0% 50px);
                 z-index: 2;
@@ -286,6 +344,9 @@
             bottom: -30px;
             left: 15px;
             margin: 0 auto;
+        }
+        &__scroll{
+            display: none;
         }
         &__phone{
             max-width: 230px;
@@ -649,6 +710,16 @@
                 margin: 0 0 15px;
                 text-align: left;
 
+                a{
+                    color: inherit;
+                    text-decoration: none;
+                    transition: ease .3s;
+
+                    &:hover{
+                        opacity: .7;
+                    }
+                }
+
                 b{
                     font-weight: 400;
                     color: v.$gold_light;
@@ -956,11 +1027,20 @@
             padding: 0;
             margin: 0 0 25px;
 
+            &.visible{
+                li{
+                    &:before{
+                        left: 3px;
+                        opacity: 1;
+                    }
+                }
+            }
+
             li{
                 font-size: 14px;
                 line-height: 22px;
                 color: v.$fontblack;
-                padding-left: 21px;
+                padding-left: 24px;
                 margin: 0 0 3px;
                 position: relative;
 
@@ -972,8 +1052,10 @@
                     border-bottom: 1px solid v.$gold;
                     position: absolute;
                     top: 5px;
-                    left: 0;
+                    left: -10px;
+                    opacity: 0;
                     transform: rotate(45deg);
+                    transition: ease .3s;
                 }
 
                 &:last-of-type{
@@ -1418,6 +1500,10 @@
         &__list{
             flex-wrap: nowrap;
             flex-direction: column;
+
+            .slick-list{
+                overflow: visible;
+            }
 
             .logo{
                 max-width: 200px;

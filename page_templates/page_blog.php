@@ -14,12 +14,13 @@ get_header(); ?>
         <a href="tel:516004957" class="subpageHeader__phone">
             <span>516 004 957</span>
         </a>
+        <a href="#first" class="subpageHeader__scroll"></a>
     </section>
-    <section class="blogList">
+    <section id="first" class="blogList">
         <div class="blogList__wrap container">
             <div class="blogList__heading">
                 <div class="sectionCenterHeading">
-                    <div class="sectionCenterHeading__wrap">
+                    <div class="sectionCenterHeading__wrap" data-aos="fade-up">
                         <p class="lead">Informacje</p>
                         <h2>Blog</h2>
                     </div>
@@ -35,10 +36,10 @@ get_header(); ?>
             <div class="blogList__featured">
                 <?php while( $featured->have_posts() ) : $featured->the_post(); ?>
                 <article class="blogArticle blogArticle--featured">
-                    <a href="<?php the_permalink(); ?>" class="blogArticle__image">
+                    <a href="<?php the_permalink(); ?>" class="blogArticle__image" data-aos="fade-right">
                         <img src="<?php echo get_the_post_thumbnail_url(); ?>"/>
                     </a>
-                    <div class="blogArticle__content">
+                    <div class="blogArticle__content" data-aos="fade-left">
                         <p class="lead">Ostatni wpis</p>
                         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                         <div class="excerpt">
@@ -61,7 +62,7 @@ get_header(); ?>
             if( $posts->have_posts() ): ?>
             <div class="blogList__list">
                 <?php while( $posts->have_posts() ) : $posts->the_post(); ?>
-                <article class="blogArticle">
+                <article class="blogArticle" data-aos="fade-up">
                     <a href="<?php the_permalink(); ?>" class="blogArticle__image">
                         <img src="<?php echo get_the_post_thumbnail_url(); ?>"/>
                     </a>

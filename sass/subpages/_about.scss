@@ -1,5 +1,11 @@
 @use '../global/variables' as v;
 
+.iam{
+    &--about{
+        overflow: hidden;
+    }
+}
+
 .aboutMain{
     padding: 60px 0;
 

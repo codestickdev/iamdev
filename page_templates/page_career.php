@@ -14,8 +14,9 @@ get_header(); ?>
         <a href="tel:516004957" class="subpageHeader__phone">
             <span>516 004 957</span>
         </a>
+        <a href="#first" class="subpageHeader__scroll"></a>
     </section>
-    <section class="careerMain">
+    <section id="first" class="careerMain">
         <div class="sectionCenterHeading">
             <div class="sectionCenterHeading__wrap">
                 <p class="lead">Dołącz do nas</p>
@@ -29,7 +30,7 @@ get_header(); ?>
                     <?php if(get_field('career_offers')): ?>
                     <ul>
                         <?php while(have_rows('career_offers')): the_row(); ?>
-                        <li><?php echo get_sub_field('career_offers_name'); ?></li>
+                        <li class="career_position"><?php echo get_sub_field('career_offers_name'); ?></li>
                         <?php endwhile; ?>
                     </ul>
                     <?php else: ?>
@@ -47,7 +48,7 @@ get_header(); ?>
                     while(have_rows('career_steps')): the_row();
                         $index++
                     ?>
-                    <div class="steps__step">
+                    <div class="steps__step" data-aos="fade-up">
                         <div class="heading">
                             <h3><span>0<?php echo $index; ?></span> <?php echo get_sub_field('career_steps_name'); ?></h3>
                             <?php echo get_sub_field('career_steps_desc'); ?>

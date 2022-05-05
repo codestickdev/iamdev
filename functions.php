@@ -147,15 +147,33 @@ function iamdev_scripts() {
 	wp_register_script( 'jquery', get_template_directory_uri() . '/plugins/jQuery/jquery-3.6.0.min.js', null, null, true );
 	wp_enqueue_script('jquery');
 
+	// jQuery Visible
+	wp_register_script( 'jquery-visible', get_template_directory_uri() . '/plugins/visible/jquery.visible.min.js', null, null, true );
+	wp_enqueue_script('jquery-visible');
+
+	// AOS
+	wp_enqueue_style( 'iam-aos-css', get_template_directory_uri() . '/plugins/aos/aos.css', array(), _S_VERSION );
+	wp_register_script( 'iam-aos', get_template_directory_uri() . '/plugins/aos/aos.min.js', null, null, true );
+	wp_enqueue_script('iam-aos');
+
 	// Slick
 	wp_enqueue_style( 'slick-style', get_template_directory_uri() . '/plugins/slick/slick-theme.css', array(), _S_VERSION );
 	wp_enqueue_style( 'slick-theme', get_template_directory_uri() . '/plugins/slick/slick.css', array(), _S_VERSION );
 	wp_register_script( 'slick-script', get_template_directory_uri() . '/plugins/slick/slick.min.js', null, null, true );
 	wp_enqueue_script('slick-script');
 
+	// Animations
+	wp_register_script('iamdev-animations', get_template_directory_uri() . '/js/_animations.js', array(), false, false);
+	wp_enqueue_script('iamdev-animations');
+
 	// Sliders
 	wp_register_script('iamdev-sliders', get_template_directory_uri() . '/js/_sliders.js', array(), false, false);
 	wp_enqueue_script('iamdev-sliders');
+
+	// Forms
+	wp_register_script('iamdev-forms', get_template_directory_uri() . '/js/_forms.js', array(), false, false);
+	wp_enqueue_script('iamdev-forms');
+	wp_localize_script( 'iamdev-forms', 'iam', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 
 	// Theme scripts
 	wp_register_script('iamdev-scripts', get_template_directory_uri() . '/js/custom.js', array(), false, false);
@@ -249,3 +267,71 @@ function be_pagination_post_nav_next( $output ) {
     return str_replace( '<a ', '<a class="btn btn--next" ', $output );
 }
 add_filter( 'next_post_link', 'be_pagination_post_nav_next' );
+
+
+/**
+ * Upload attachments to wp media
+ */
+function upload_to_media($image_url, $delete){
+	$upload_dir = wp_upload_dir();
+	$image_data = file_get_contents( $image_url );
+	$filename = basename( $image_url );
+
+	if ( wp_mkdir_p( $upload_dir['path'] ) ) {
+		$file = $upload_dir['path'] . '/' . $filename;
+	}else {
+		$file = $upload_dir['basedir'] . '/' . $filename;
+	}
+
+	file_put_contents( $file, $image_data );
+
+	$wp_filetype = wp_check_filetype( $filename, null );
+
+	$attachment = array(
+		'post_mime_type' => $wp_filetype['type'],
+		'post_title' => sanitize_file_name( $filename ),
+		'post_content' => '',
+		'post_status' => 'inherit'
+	);
+
+	$attach_id = wp_insert_attachment( $attachment, $file );
+	require_once( ABSPATH . 'wp-admin/includes/image.php' );
+	$attach_data = wp_generate_attachment_metadata( $attach_id, $file );
+	wp_update_attachment_metadata( $attach_id, $attach_data );
+
+	// Delete file from temp dir
+	if($delete == true){
+		$path = parse_url($image_url, PHP_URL_PATH);
+		$url = $_SERVER['DOCUMENT_ROOT'] . $path;
+		unlink($url);
+	}
+
+	return $attach_id;
+}
+
+add_action('wp_ajax_contactForm', 'contactForm');
+add_action('wp_ajax_nopriv_contactForm', 'contactForm');
+
+function contactForm(){
+	$name = isset( $_POST['name'] ) ? $_POST['name'] : '';
+	$mail = isset( $_POST['mail'] ) ? $_POST['mail'] : '';
+	$phone = isset( $_POST['phone'] ) ? $_POST['phone'] : '';
+	$company = isset( $_POST['company'] ) ? $_POST['company'] : '';
+	// $file = $_FILES['file'];
+	$user_mess = isset( $_POST['message'] ) ? $_POST['message'] : '';
+	
+	$to = 'piotrdevv@gmail.com';
+	$subject = '[iamdeveloper.pl] Formularz kontaktowy';
+	$message = "Imię i naziwsko: " . $name . "\r\nMail: " . $mail . "\r\nTelefon: " . $phone . "\r\nFirma: " . $company . "\r\nWiadomość: " . $user_mess;
+
+	$headers = array('"Content-Type", "multipart/form-data"; charset=UTF-8');
+	
+	$sent = false;
+	$sent = wp_mail( $to, $subject, $message, $headers);
+
+	$response = $sent;
+
+	echo json_encode($response);
+
+	exit();
+}

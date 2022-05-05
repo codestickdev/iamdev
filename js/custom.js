@@ -54,25 +54,21 @@
     });
 
     /**
-     * Contact form + career
+     * Menu mobile
      */
     $(document).ready(function(){
-        // File upload
-        $('.uploadFile').on('click', function(){
-            $('#contactFile').click();
+        let menuMobile = $('.menuMobile'),
+            mobilemenuitem = $('.menuMobile__wrap').find('.menu-item a');
+
+        $('.toggleMenu').on('click', function(){
+            menuMobile.addClass('menuMobile--active');
         });
-
-        let deftext = $('.uploadFile').find('p').html();
-
-        $('#contactForm').on('change', '#contactFile', function(){
-            let fileName = $(this).val().split('\\').pop();
-
-            if(fileName !== ''){
-                $('.uploadFile').find('p').html(fileName);
-            }else{
-                $('.uploadFile').find('p').html(deftext);
-            }
+        $('.menuMobile__close').on('click', function(){
+            menuMobile.removeClass('menuMobile--active');
+        });
+        $(mobilemenuitem).on('click', function(){
+            menuMobile.removeClass('menuMobile--active');
         });
     });
-
+    
 }(jQuery));
