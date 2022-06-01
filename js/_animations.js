@@ -44,7 +44,10 @@
      */
     $(document).ready(function(){
         if($(window).width() > 991){
-            AOS.init();
+            AOS.init({
+                delay: 250,
+                duration: 800,
+            });
         }else{
             AOS.init({
                 disable: true,
@@ -82,5 +85,24 @@
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top
         }, 500);
+    });
+
+    /**
+     * Move elements on scroll
+     */
+    $(document).ready(function(){
+        $(document).on('scroll', function(){
+            let wScroll = $(window).scrollTop(),
+                el = $('.move-element');
+
+            if(el.visible(true)){
+                let top = $(el).offset().top,
+                    value = ((top-wScroll)*0.06);
+
+                el.css({
+                    'transform': 'translate(0, ' + value + 'px)',
+                });
+            }
+        });
     });
 }(jQuery));

@@ -316,3 +316,10 @@ a{
         }
     }
 }
+
+/**
+ *  Move element on scroll
+ */
+.move-element{
+    transition: ease .3s;
+}

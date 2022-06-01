@@ -4672,5 +4672,11 @@ a:focus {
     }
   }
 }
+/**
+ *  Move element on scroll
+ */
+.move-element {
+  transition: ease 0.3s;
+}
 
 /*# sourceMappingURL=style.css.map */

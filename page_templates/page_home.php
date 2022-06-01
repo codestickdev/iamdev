@@ -60,12 +60,12 @@ get_header(); ?>
             </div>
             <div class="homeAbout__images container" data-aos="fade-up">
                 <div class="left">
-                    <div class="image">
+                    <div class="image move-element">
                         <img src="<?php echo get_field('homeAbout_image_left')['url']; ?>" alt="<?php echo get_field('homeAbout_image_left')['alt']; ?>"/>
                     </div>
                 </div>
                 <div class="right">
-                    <div class="image">
+                    <div class="image move-element">
                         <img src="<?php echo get_field('homeAbout_image_right')['url']; ?>" alt="<?php echo get_field('homeAbout_image_right')['alt']; ?>"/>
                     </div>
                 </div>
@@ -165,9 +165,9 @@ get_header(); ?>
             </div>
             <div class="homeTrusted__list">
                 <?php while(have_rows('homeTrusted')): the_row(); ?>
-                <div class="logo">
+                <a href="<?php echo home_url('/referencje'); ?>" class="logo">
                     <img src="<?php echo get_sub_field('homeTrusted_logo')['url']; ?>" alt="<?php echo get_sub_field('homeTrusted_logo')['alt']; ?>"/>
-                </div>
+                </a>
                 <?php endwhile; ?>
             </div>
         </div>

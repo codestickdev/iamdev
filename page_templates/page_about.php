@@ -45,7 +45,7 @@ get_header(); ?>
     <section class="aboutOwner">
         <div class="aboutOwner__wrap container">
             <div class="aboutOwner__image">
-                <div class="image">
+                <div class="image move-element">
                     <img src="<?php echo get_field('mainOwner_image')['url']; ?>" alt="<?php echo get_field('mainOwner_image')['alt']; ?>"/>
                 </div>
             </div>
